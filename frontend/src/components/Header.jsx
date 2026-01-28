@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +37,12 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png" 
+              src={isDarkMode 
+                ? "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
+                : "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png"
+              }
               alt="TaraVera Bio Logo" 
-              className="h-10 w-auto"
+              className="h-10 w-auto transition-opacity duration-300"
             />
           </div>
 
