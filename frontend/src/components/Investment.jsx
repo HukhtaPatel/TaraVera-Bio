@@ -158,46 +158,7 @@ const Investment = () => {
             </div>
           </div>
 
-          {/* Allocation Breakdown */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
-              <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Asset Development</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                  <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
-                  <span>Target validation</span>
-                </li>
-                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                  <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
-                  <span>Assay development</span>
-                </li>
-                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                  <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
-                  <span>Initiate discovery</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
-              <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Organizational</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                  <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
-                  <span>Company formation</span>
-                </li>
-                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                  <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
-                  <span>Fractional chemistry leader</span>
-                </li>
-                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                  <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
-                  <span>Legal & finance support</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
+          <div className="text-center">
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               Seeking seed investors who complement expertise, expand scientific/clinical networks, and help shape & scale the company's vision.
             </p>
