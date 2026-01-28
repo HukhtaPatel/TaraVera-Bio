@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flask, Search, Layers, Microscope } from 'lucide-react';
+import { Beaker, Search, Layers, Microscope } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 
 const Technology = () => {
