@@ -89,52 +89,52 @@ const DrugDiscovery = () => {
         </div>
 
         {/* Technology Stack */}
-        <div className="bg-gray-50 rounded-2xl p-10 mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Advanced Screening Technologies</h3>
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-10 mb-16">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Advanced Screening Technologies</h3>
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 mx-auto bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-blue-600" />
+            <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 mx-auto bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">Fragment-Based Screening</h4>
-              <p className="text-sm text-gray-600">~2,000 CNS-compliant fragments for allosteric pockets</p>
+              <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Fragment-Based Screening</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">~2,000 CNS-compliant fragments for allosteric pockets</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 mx-auto bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-6 h-6 text-purple-600" />
+            <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-600 hover:border-purple-300 dark:hover:border-purple-500 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 mx-auto bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center mb-4">
+                <Database className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">DNA-Encoded Libraries</h4>
-              <p className="text-sm text-gray-600">Billions of compounds for non-catalytic binders</p>
+              <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">DNA-Encoded Libraries</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Billions of compounds for non-catalytic binders</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 mx-auto bg-pink-100 rounded-lg flex items-center justify-center mb-4">
-                <Workflow className="w-6 h-6 text-pink-600" />
+            <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-600 hover:border-pink-300 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 mx-auto bg-pink-100 dark:bg-pink-900/50 rounded-lg flex items-center justify-center mb-4">
+                <Workflow className="w-6 h-6 text-pink-600 dark:text-pink-400" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">AI-Powered Virtual Screening</h4>
-              <p className="text-sm text-gray-600">AlphaFold models for ultra-large chemical space</p>
+              <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">AI-Powered Virtual Screening</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">AlphaFold models for ultra-large chemical space</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 mx-auto bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <Beaker className="w-6 h-6 text-orange-600" />
+            <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-600 hover:border-orange-300 dark:hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 mx-auto bg-orange-100 dark:bg-orange-900/50 rounded-lg flex items-center justify-center mb-4">
+                <Beaker className="w-6 h-6 text-orange-600 dark:text-orange-400" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">Cellular Validation</h4>
-              <p className="text-sm text-gray-600">iPSC-derived neurons for disease-relevant testing</p>
+              <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Cellular Validation</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">iPSC-derived neurons for disease-relevant testing</p>
             </div>
           </div>
         </div>
 
         {/* Timeline Accordion */}
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Discovery Timeline</h3>
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Discovery Timeline</h3>
           <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="tier1" className="bg-white rounded-lg border border-gray-200 px-6">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900 hover:text-blue-600">
+            <AccordionItem value="tier1" className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 px-6">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400">
                 Tier 1: Diversity & Discovery (4-6 months)
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 pt-4 pb-6">
+              <AccordionContent className="text-gray-600 dark:text-gray-400 pt-4 pb-6">
                 <ul className="space-y-2">
                   <li>• Fragment-Based Screening with CNS-compliant fragments</li>
                   <li>• DNA-Encoded Library screening (billions of compounds)</li>
@@ -144,11 +144,11 @@ const DrugDiscovery = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="tier2" className="bg-white rounded-lg border border-gray-200 px-6">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900 hover:text-purple-600">
+            <AccordionItem value="tier2" className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 px-6">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400">
                 Tier 2: Validation & Triage (7-12 months)
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 pt-4 pb-6">
+              <AccordionContent className="text-gray-600 dark:text-gray-400 pt-4 pb-6">
                 <ul className="space-y-2">
                   <li>• Crystallography for structure confirmation</li>
                   <li>• SPR binding affinity measurements</li>
@@ -158,11 +158,11 @@ const DrugDiscovery = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="tier3" className="bg-white rounded-lg border border-gray-200 px-6">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900 hover:text-pink-600">
+            <AccordionItem value="tier3" className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 px-6">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-pink-600 dark:hover:text-pink-400">
                 Tier 3: Precision & Selectivity (10-15 months)
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 pt-4 pb-6">
+              <AccordionContent className="text-gray-600 dark:text-gray-400 pt-4 pb-6">
                 <ul className="space-y-2">
                   <li>• ABPP-MS DUBome mapping for selectivity profiling</li>
                   <li>• K48-linkage assay for mechanism confirmation</li>
@@ -171,11 +171,11 @@ const DrugDiscovery = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="tier4" className="bg-white rounded-lg border border-gray-200 px-6">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900 hover:text-orange-600">
+            <AccordionItem value="tier4" className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 px-6">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-orange-600 dark:hover:text-orange-400">
                 Tier 4: Cellular & Disease-Relevant (16-18 months)
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 pt-4 pb-6">
+              <AccordionContent className="text-gray-600 dark:text-gray-400 pt-4 pb-6">
                 <ul className="space-y-2">
                   <li>• Cellular target engagement (CETSA, MS-CETSA)</li>
                   <li>• Tau reduction in iPSC-derived neurons</li>
