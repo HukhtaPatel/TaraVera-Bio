@@ -119,20 +119,85 @@ const Investment = () => {
 
         {/* Funding Details */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-10 shadow-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Pre-Seed Funding</h3>
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Pre-Seed Funding (~$2M)</h3>
+          
+          {/* Phase Breakdown */}
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="text-center p-8 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
               <div className="text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">$500K</div>
-              <div className="text-gray-700 dark:text-gray-300 font-medium mb-2">Phase 1 (6-9 months)</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Target validation, assay readiness, early leads</div>
+              <div className="text-gray-700 dark:text-gray-300 font-medium mb-4 text-xl">Phase 1 (6-9 months)</div>
+              <div className="space-y-2 text-left">
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full mt-2"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Target validation</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full mt-2"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Assay readiness</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full mt-2"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Generating early leads</span>
+                </div>
+              </div>
             </div>
+            
             <div className="text-center p-8 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
-              <div className="text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2">$2M</div>
-              <div className="text-gray-700 dark:text-gray-300 font-medium mb-2">Phase 2 (18-24 months total)</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Screening campaign & IP generation</div>
+              <div className="text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2">$1.5M</div>
+              <div className="text-gray-700 dark:text-gray-300 font-medium mb-4 text-xl">Phase 2 (18-24 months total)</div>
+              <div className="space-y-2 text-left">
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-purple-500 dark:bg-purple-400 rounded-full mt-2"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Launch screening campaign</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-purple-500 dark:bg-purple-400 rounded-full mt-2"></div>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Secure broad composition of matter IP on target</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="text-center">
+
+          {/* Allocation Breakdown */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Asset Development</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                  <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
+                  <span>Target validation</span>
+                </li>
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                  <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
+                  <span>Assay development</span>
+                </li>
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                  <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
+                  <span>Initiate discovery</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Organizational</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                  <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
+                  <span>Company formation</span>
+                </li>
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                  <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
+                  <span>Fractional chemistry leader</span>
+                </li>
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                  <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
+                  <span>Legal & finance support</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               Seeking seed investors who complement expertise, expand scientific/clinical networks, and help shape & scale the company's vision.
             </p>
