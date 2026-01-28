@@ -4,9 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import ScientificMoat from "./components/ScientificMoat";
-import DrugDiscovery from "./components/DrugDiscovery";
+import ScientificApproach from "./components/ScientificApproach";
+import Technology from "./components/Technology";
 import Team from "./components/Team";
+import Investment from "./components/Investment";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
@@ -19,13 +20,16 @@ function App() {
           <main>
             <Hero />
             <div id="science">
-              <ScientificMoat />
+              <ScientificApproach />
             </div>
             <div id="platform">
-              <DrugDiscovery />
+              <Technology />
             </div>
             <div id="team">
               <Team />
+            </div>
+            <div id="investment">
+              <Investment />
             </div>
             <div id="contact">
               <CTA />
