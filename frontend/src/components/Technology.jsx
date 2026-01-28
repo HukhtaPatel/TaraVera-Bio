@@ -48,7 +48,7 @@ const Technology = () => {
 
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-500 hover:shadow-lg transition-all duration-300">
             <div className="w-12 h-12 mx-auto bg-orange-100 dark:bg-orange-900/50 rounded-lg flex items-center justify-center mb-4">
-              <Flask className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+              <Beaker className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             </div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Structure-Guided Design</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">Rational optimization</p>
