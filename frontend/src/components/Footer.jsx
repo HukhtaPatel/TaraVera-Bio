@@ -1,7 +1,10 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Footer = () => {
+  const { isDarkMode } = useTheme();
+  
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -9,9 +12,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <img 
-              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png" 
+              src={isDarkMode 
+                ? "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
+                : "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
+              }
               alt="TaraVera Bio Logo" 
-              className="h-10 w-auto mb-4"
+              className="h-10 w-auto mb-4 transition-opacity duration-300"
             />
             <p className="text-gray-400 dark:text-gray-500 leading-relaxed mb-6">
               Transforming Alzheimer's treatment through precision neurobiology. 
