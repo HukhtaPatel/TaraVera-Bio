@@ -9,9 +9,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <img 
-              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/h6dy8ss5_image.png" 
+              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png" 
               alt="TaraVera Bio Logo" 
-              className="h-10 w-auto mb-4 brightness-0 invert"
+              className="h-10 w-auto mb-4"
             />
             <p className="text-gray-400 leading-relaxed mb-6">
               Transforming Alzheimer's treatment through precision neurobiology. 
