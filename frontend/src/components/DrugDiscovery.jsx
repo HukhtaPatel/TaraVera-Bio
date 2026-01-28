@@ -4,20 +4,20 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './
 
 const DrugDiscovery = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 font-medium mb-4">
             <Workflow className="w-4 h-4" />
             Our Platform
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Drug Discovery Engine:
             <br />
-            <span className="text-purple-600">Multi-Pathway Innovation</span>
+            <span className="text-purple-600 dark:text-purple-400">Multi-Pathway Innovation</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Leveraging cutting-edge screening technologies to generate differentiated First-in-Class molecules
           </p>
         </div>
@@ -27,61 +27,61 @@ const DrugDiscovery = () => {
           <img 
             src="https://images.unsplash.com/photo-1707944745860-4615eb585a41" 
             alt="Drug Discovery Laboratory"
-            className="w-full h-96 object-cover"
+            className="w-full h-96 object-cover dark:opacity-80"
           />
         </div>
 
         {/* Approach Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Inhibitor Strategy */}
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-200 hover:shadow-xl transition-all duration-300">
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl p-8 border border-blue-200 dark:border-blue-800 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-14 h-14 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center">
                 <Beaker className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">USP11 Inhibitors</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">USP11 Inhibitors</h3>
             </div>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Small molecules that block USP11's catalytic activity, preventing Tau deubiquitination and maintaining proteasomal clearance tags.
             </p>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
                 <span>Allosteric pocket targeting</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
                 <span>High selectivity for USP11</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
                 <span>CNS-penetrant design</span>
               </div>
             </div>
           </div>
 
           {/* Degrader Strategy */}
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200 hover:shadow-xl transition-all duration-300">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-2xl p-8 border border-purple-200 dark:border-purple-800 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-14 h-14 bg-purple-600 dark:bg-purple-500 rounded-lg flex items-center justify-center">
                 <Database className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Targeted Degraders</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Targeted Degraders</h3>
             </div>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               PROTAC and molecular glue strategies to eliminate USP11 protein entirely, offering an alternative modality with potential for enhanced efficacy.
             </p>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
                 <span>E3 ligase recruitment</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
                 <span>Sustained target knockdown</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full"></div>
                 <span>Sub-stoichiometric dosing</span>
               </div>
             </div>
