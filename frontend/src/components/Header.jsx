@@ -34,7 +34,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/h6dy8ss5_image.png" 
+              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png" 
               alt="TaraVera Bio Logo" 
               className="h-10 w-auto"
             />
