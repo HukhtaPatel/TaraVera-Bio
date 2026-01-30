@@ -212,10 +212,10 @@ const BiotechBackground = () => {
               const dy = dataPoints[i].y - dataPoints[j].y;
               const distance = Math.sqrt(dx * dx + dy * dy);
 
-              if (distance < 80) {
-                const opacity = (1 - distance / 80) * 0.1;
+              if (distance < 100) { // Increased from 80 to 100
+                const opacity = (1 - distance / 100) * 0.15; // Increased from 0.1 to 0.15
                 ctx.strokeStyle = `rgba(147, 51, 234, ${opacity})`;
-                ctx.lineWidth = 1;
+                ctx.lineWidth = 1.5; // Increased from 1 to 1.5
                 ctx.beginPath();
                 ctx.moveTo(dataPoints[i].x, dataPoints[i].y);
                 ctx.lineTo(dataPoints[j].x, dataPoints[j].y);
