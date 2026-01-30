@@ -28,9 +28,24 @@ const BiotechBackground = () => {
         this.y = Math.random() * canvas.height;
         this.targetX = canvas.width * 0.8 + Math.random() * 100;
         this.targetY = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 2; // Increased from 2+1 to 3+2
+        
+        // Create mix of small, medium, and large data points
+        const sizeType = Math.random();
+        if (sizeType < 0.5) {
+          // Small data points (50%)
+          this.size = Math.random() * 1.5 + 1;
+          this.opacity = Math.random() * 0.3 + 0.3;
+        } else if (sizeType < 0.8) {
+          // Medium data points (30%)
+          this.size = Math.random() * 2 + 3;
+          this.opacity = Math.random() * 0.4 + 0.5;
+        } else {
+          // Large data points (20%)
+          this.size = Math.random() * 3 + 5;
+          this.opacity = Math.random() * 0.5 + 0.6;
+        }
+        
         this.speed = Math.random() * 0.3 + 0.1;
-        this.opacity = Math.random() * 0.5 + 0.4; // Increased from 0.4+0.3 to 0.5+0.4
         this.isGathering = Math.random() > 0.5;
         this.color = Math.random() > 0.5 ? 'rgba(59, 130, 246' : 'rgba(147, 51, 234';
       }
