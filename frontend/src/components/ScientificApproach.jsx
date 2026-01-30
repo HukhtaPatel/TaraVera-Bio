@@ -3,8 +3,17 @@ import { Brain, Target, Pill, TrendingUp } from 'lucide-react';
 
 const ScientificApproach = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-blue-50/30 dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-24 bg-gradient-to-b from-white to-blue-50/30 dark:from-gray-900 dark:to-gray-800 relative">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0 opacity-5 dark:opacity-10">
+        <img 
+          src="https://images.unsplash.com/photo-1647613561332-3d88a6a0048e" 
+          alt="Neuroscience Research Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-medium mb-4">
