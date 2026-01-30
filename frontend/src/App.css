@@ -5,6 +5,20 @@ html {
 
 .App {
     min-height: 100vh;
+    position: relative;
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Custom animations */
@@ -19,8 +33,30 @@ html {
     }
 }
 
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 .animate-fade-in {
     animation: fade-in 0.6s ease-out;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
 }
 
 /* Button hover effects */
@@ -58,4 +94,13 @@ button:focus-visible,
 a:focus-visible {
     outline: 2px solid #3b82f6;
     outline-offset: 2px;
+}
+
+/* Glowing effect for biotech feel */
+.glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.glow-purple {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
 }
