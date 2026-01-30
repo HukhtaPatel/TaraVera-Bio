@@ -9,7 +9,9 @@ const BiotechBackground = () => {
 
     const ctx = canvas.getContext('2d');
     let animationFrameId;
-    let particles = [];
+    let dataPoints = [];
+    let dataStreams = [];
+    let gridCells = [];
 
     // Set canvas size
     const resizeCanvas = () => {
@@ -19,22 +21,39 @@ const BiotechBackground = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle class for molecules
-    class Particle {
+    // Data Point class (representing biotech data being collected)
+    class DataPoint {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 1;
-        this.speedX = (Math.random() - 0.5) * 0.5;
-        this.speedY = (Math.random() - 0.5) * 0.5;
-        this.opacity = Math.random() * 0.5 + 0.2;
+        this.targetX = canvas.width * 0.8 + Math.random() * 100;
+        this.targetY = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speed = Math.random() * 0.3 + 0.1;
+        this.opacity = Math.random() * 0.4 + 0.3;
+        this.isGathering = Math.random() > 0.5;
+        this.color = Math.random() > 0.5 ? 'rgba(59, 130, 246' : 'rgba(147, 51, 234';
       }
 
       update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
+        if (this.isGathering) {
+          // Move towards target (gathering phase)
+          const dx = this.targetX - this.x;
+          const dy = this.targetY - this.y;
+          this.x += dx * this.speed * 0.02;
+          this.y += dy * this.speed * 0.02;
 
-        // Wrap around screen
+          // If close to target, mark for sorting
+          if (Math.abs(dx) < 50 && Math.abs(dy) < 50) {
+            this.isGathering = false;
+          }
+        } else {
+          // Drift slowly (sorting phase)
+          this.x += (Math.random() - 0.5) * 0.3;
+          this.y += (Math.random() - 0.5) * 0.3;
+        }
+
+        // Wrap around
         if (this.x > canvas.width) this.x = 0;
         if (this.x < 0) this.x = canvas.width;
         if (this.y > canvas.height) this.y = 0;
@@ -42,37 +61,120 @@ const BiotechBackground = () => {
       }
 
       draw() {
-        ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
+        ctx.fillStyle = `${this.color}, ${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
       }
     }
 
-    // Create particles
-    const particleCount = 80;
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+    // Data Stream class (flowing data lines)
+    class DataStream {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = 0;
+        this.length = Math.random() * 100 + 50;
+        this.speed = Math.random() * 2 + 1;
+        this.opacity = Math.random() * 0.2 + 0.1;
+        this.segments = [];
+        
+        // Create segments for the stream
+        for (let i = 0; i < 8; i++) {
+          this.segments.push({
+            offset: i * 15,
+            char: Math.random() > 0.5 ? '0' : '1'
+          });
+        }
+      }
+
+      update() {
+        this.y += this.speed;
+        if (this.y > canvas.height + this.length) {
+          this.y = -this.length;
+          this.x = Math.random() * canvas.width;
+        }
+      }
+
+      draw() {
+        ctx.font = '10px monospace';
+        ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
+        
+        this.segments.forEach((segment, i) => {
+          const segmentY = this.y - segment.offset;
+          if (segmentY > 0 && segmentY < canvas.height) {
+            ctx.fillText(segment.char, this.x, segmentY);
+          }
+        });
+      }
     }
 
-    // Draw connections between nearby particles
-    const drawConnections = () => {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+    // Grid Cell class (array visualization)
+    class GridCell {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = 40;
+        this.opacity = 0;
+        this.targetOpacity = Math.random() * 0.15;
+        this.filled = Math.random() > 0.7;
+      }
 
-          if (distance < 150) {
-            const opacity = (1 - distance / 150) * 0.15;
-            ctx.strokeStyle = `rgba(147, 51, 234, ${opacity})`;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
+      update() {
+        // Pulse effect
+        this.opacity += (this.targetOpacity - this.opacity) * 0.1;
+        if (Math.random() > 0.99) {
+          this.targetOpacity = Math.random() * 0.15;
         }
+      }
+
+      draw() {
+        if (this.filled) {
+          ctx.strokeStyle = `rgba(147, 51, 234, ${this.opacity})`;
+          ctx.lineWidth = 1;
+          ctx.strokeRect(this.x, this.y, this.size, this.size);
+        }
+      }
+    }
+
+    // Initialize elements
+    const dataPointCount = 60;
+    for (let i = 0; i < dataPointCount; i++) {
+      dataPoints.push(new DataPoint());
+    }
+
+    const streamCount = 15;
+    for (let i = 0; i < streamCount; i++) {
+      dataStreams.push(new DataStream());
+    }
+
+    // Create grid on right side (array visualization)
+    const gridStartX = canvas.width * 0.75;
+    const rows = Math.floor(canvas.height / 45);
+    const cols = 4;
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        gridCells.push(new GridCell(
+          gridStartX + j * 45,
+          i * 45
+        ));
+      }
+    }
+
+    // Draw DNA helix elements
+    const drawHelixElements = () => {
+      const helixX = canvas.width * 0.15;
+      const time = Date.now() * 0.001;
+      
+      for (let i = 0; i < 10; i++) {
+        const y = (i * 80 + time * 30) % canvas.height;
+        const offset = Math.sin(time + i * 0.5) * 30;
+        
+        ctx.strokeStyle = 'rgba(236, 72, 153, 0.1)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(helixX - offset, y);
+        ctx.lineTo(helixX + offset, y);
+        ctx.stroke();
       }
     };
 
@@ -80,14 +182,49 @@ const BiotechBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw connections first (behind particles)
-      drawConnections();
+      // Draw helix elements
+      drawHelixElements();
 
-      // Update and draw particles
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
+      // Draw grid cells (array visualization)
+      gridCells.forEach(cell => {
+        cell.update();
+        cell.draw();
       });
+
+      // Draw data streams
+      dataStreams.forEach(stream => {
+        stream.update();
+        stream.draw();
+      });
+
+      // Draw data points
+      dataPoints.forEach(point => {
+        point.update();
+        point.draw();
+      });
+
+      // Draw connections between nearby gathered points
+      for (let i = 0; i < dataPoints.length; i++) {
+        if (!dataPoints[i].isGathering) {
+          for (let j = i + 1; j < dataPoints.length; j++) {
+            if (!dataPoints[j].isGathering) {
+              const dx = dataPoints[i].x - dataPoints[j].x;
+              const dy = dataPoints[i].y - dataPoints[j].y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+
+              if (distance < 80) {
+                const opacity = (1 - distance / 80) * 0.1;
+                ctx.strokeStyle = `rgba(147, 51, 234, ${opacity})`;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(dataPoints[i].x, dataPoints[i].y);
+                ctx.lineTo(dataPoints[j].x, dataPoints[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+        }
+      }
 
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -104,7 +241,7 @@ const BiotechBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-30 dark:opacity-20"
+      className="fixed inset-0 pointer-events-none z-0 opacity-40 dark:opacity-25"
       style={{ background: 'transparent' }}
     />
   );
