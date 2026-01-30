@@ -59,15 +59,15 @@ const Hero = () => {
 
         {/* Stats Bar */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="text-center p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300">
+          <div className="text-center p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 animate-float" style={{animationDelay: '0s'}}>
             <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">Pre-Seed</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">Funding Stage</div>
           </div>
-          <div className="text-center p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300">
+          <div className="text-center p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 animate-float" style={{animationDelay: '0.5s'}}>
             <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">18-24 Mo</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">To lead compound generation</div>
           </div>
-          <div className="text-center p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-600 transition-all duration-300">
+          <div className="text-center p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-600 transition-all duration-300 animate-float" style={{animationDelay: '1s'}}>
             <div className="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-2">$10-15B</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">Global tau therapeutics market</div>
           </div>
