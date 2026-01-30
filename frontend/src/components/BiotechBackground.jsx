@@ -28,9 +28,9 @@ const BiotechBackground = () => {
         this.y = Math.random() * canvas.height;
         this.targetX = canvas.width * 0.8 + Math.random() * 100;
         this.targetY = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
+        this.size = Math.random() * 3 + 2; // Increased from 2+1 to 3+2
         this.speed = Math.random() * 0.3 + 0.1;
-        this.opacity = Math.random() * 0.4 + 0.3;
+        this.opacity = Math.random() * 0.5 + 0.4; // Increased from 0.4+0.3 to 0.5+0.4
         this.isGathering = Math.random() > 0.5;
         this.color = Math.random() > 0.5 ? 'rgba(59, 130, 246' : 'rgba(147, 51, 234';
       }
