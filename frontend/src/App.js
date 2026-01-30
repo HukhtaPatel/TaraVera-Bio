@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import BiotechBackground from "./components/BiotechBackground";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ScientificApproach from "./components/ScientificApproach";
@@ -15,6 +16,7 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App">
+        <BiotechBackground />
         <BrowserRouter>
           <Header />
           <main>
