@@ -75,7 +75,7 @@ const BiotechBackground = () => {
         this.y = 0;
         this.length = Math.random() * 100 + 50;
         this.speed = Math.random() * 2 + 1;
-        this.opacity = Math.random() * 0.2 + 0.1;
+        this.opacity = Math.random() * 0.3 + 0.2; // Increased from 0.2+0.1 to 0.3+0.2
         this.segments = [];
         
         // Create segments for the stream
@@ -96,7 +96,7 @@ const BiotechBackground = () => {
       }
 
       draw() {
-        ctx.font = '10px monospace';
+        ctx.font = '14px monospace'; // Increased from 10px to 14px
         ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
         
         this.segments.forEach((segment, i) => {
