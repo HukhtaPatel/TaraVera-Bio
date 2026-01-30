@@ -22,8 +22,8 @@ const Team = () => {
         {/* Hero Image */}
         <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
           <img 
-            src="https://images.unsplash.com/photo-1707944746042-e4c81c191812" 
-            alt="Research Team"
+            src="https://images.unsplash.com/photo-1707944745853-b86631676829" 
+            alt="Female Research Scientist in Laboratory"
             className="w-full h-96 object-cover dark:opacity-80"
           />
         </div>
