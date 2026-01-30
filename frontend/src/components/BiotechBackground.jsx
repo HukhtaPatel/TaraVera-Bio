@@ -241,7 +241,7 @@ const BiotechBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-40 dark:opacity-25"
+      className="fixed inset-0 pointer-events-none z-0 opacity-50 dark:opacity-35"
       style={{ background: 'transparent' }}
     />
   );
