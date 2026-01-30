@@ -167,10 +167,10 @@ const BiotechBackground = () => {
       
       for (let i = 0; i < 10; i++) {
         const y = (i * 80 + time * 30) % canvas.height;
-        const offset = Math.sin(time + i * 0.5) * 30;
+        const offset = Math.sin(time + i * 0.5) * 40; // Increased from 30 to 40
         
-        ctx.strokeStyle = 'rgba(236, 72, 153, 0.1)';
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = 'rgba(236, 72, 153, 0.15)'; // Increased from 0.1 to 0.15
+        ctx.lineWidth = 1.5; // Increased from 1 to 1.5
         ctx.beginPath();
         ctx.moveTo(helixX - offset, y);
         ctx.lineTo(helixX + offset, y);
