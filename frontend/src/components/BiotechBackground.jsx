@@ -122,33 +122,7 @@ const BiotechBackground = () => {
       }
     }
 
-    // Grid Cell class (array visualization)
-    class GridCell {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.size = 50; // Increased from 40 to 50
-        this.opacity = 0;
-        this.targetOpacity = Math.random() * 0.25; // Increased from 0.15 to 0.25
-        this.filled = Math.random() > 0.7;
-      }
-
-      update() {
-        // Pulse effect
-        this.opacity += (this.targetOpacity - this.opacity) * 0.1;
-        if (Math.random() > 0.99) {
-          this.targetOpacity = Math.random() * 0.25; // Increased from 0.15 to 0.25
-        }
-      }
-
-      draw() {
-        if (this.filled) {
-          ctx.strokeStyle = `rgba(147, 51, 234, ${this.opacity})`;
-          ctx.lineWidth = 1.5; // Increased from 1 to 1.5
-          ctx.strokeRect(this.x, this.y, this.size, this.size);
-        }
-      }
-    }
+ 
 
     // Initialize elements
     const dataPointCount = 60;
