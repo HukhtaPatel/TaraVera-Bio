@@ -133,12 +133,6 @@ const BiotechBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw data streams
-      dataStreams.forEach(stream => {
-        stream.update();
-        stream.draw();
-      });
-
       // Draw data points
       dataPoints.forEach(point => {
         point.update();
