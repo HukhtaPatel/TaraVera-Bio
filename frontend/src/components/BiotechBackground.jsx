@@ -11,7 +11,6 @@ const BiotechBackground = () => {
     let animationFrameId;
     let dataPoints = [];
     let dataStreams = [];
-    let gridCells = [];
 
     // Set canvas size
     const resizeCanvas = () => {
