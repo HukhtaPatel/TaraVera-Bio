@@ -81,46 +81,6 @@ const BiotechBackground = () => {
       }
     }
 
-    // Data Stream class (flowing data lines)
-    class DataStream {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = 0;
-        this.length = Math.random() * 100 + 50;
-        this.speed = Math.random() * 2 + 1;
-        this.opacity = Math.random() * 0.3 + 0.2; // Increased from 0.2+0.1 to 0.3+0.2
-        this.segments = [];
-        
-        // Create segments for the stream
-        for (let i = 0; i < 8; i++) {
-          this.segments.push({
-            offset: i * 15,
-            char: Math.random() > 0.5 ? '0' : '1'
-          });
-        }
-      }
-
-      update() {
-        this.y += this.speed;
-        if (this.y > canvas.height + this.length) {
-          this.y = -this.length;
-          this.x = Math.random() * canvas.width;
-        }
-      }
-
-      draw() {
-        ctx.font = '14px monospace'; // Increased from 10px to 14px
-        ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
-        
-        this.segments.forEach((segment, i) => {
-          const segmentY = this.y - segment.offset;
-          if (segmentY > 0 && segmentY < canvas.height) {
-            ctx.fillText(segment.char, this.x, segmentY);
-          }
-        });
-      }
-    }
-
  
 
     // Initialize elements
