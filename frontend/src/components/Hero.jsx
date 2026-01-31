@@ -5,24 +5,8 @@ import { Button } from './ui/button';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900">
-      {/* Background Video with Overlay */}
+      {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-25 dark:opacity-15"
-        >
-          <source src="https://cdn.coverr.co/videos/coverr-brain-scan-animation-6968/1080p.mp4" type="video/mp4" />
-          <source src="https://cdn.coverr.co/videos/coverr-neural-network-visualization-6969/1080p.mp4" type="video/mp4" />
-          {/* Fallback image if video doesn't load */}
-          <img 
-            src="https://images.unsplash.com/photo-1753513291124-4f615bf1f6de" 
-            alt="Neuroscience Background"
-            className="w-full h-full object-cover"
-          />
-        </video>
         <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950/30"></div>
       </div>
 
