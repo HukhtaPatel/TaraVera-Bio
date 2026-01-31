@@ -162,19 +162,6 @@ const BiotechBackground = () => {
       dataStreams.push(new DataStream());
     }
 
-    // Create grid on right side (array visualization)
-    const gridStartX = canvas.width * 0.75;
-    const rows = Math.floor(canvas.height / 55); // Updated spacing from 45 to 55
-    const cols = 4;
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        gridCells.push(new GridCell(
-          gridStartX + j * 55, // Updated spacing from 45 to 55
-          i * 55 // Updated spacing from 45 to 55
-        ));
-      }
-    }
-
     // Draw DNA helix elements
     const drawHelixElements = () => {
       const helixX = canvas.width * 0.15;
