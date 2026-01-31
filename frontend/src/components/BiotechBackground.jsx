@@ -162,36 +162,9 @@ const BiotechBackground = () => {
       dataStreams.push(new DataStream());
     }
 
-    // Draw DNA helix elements
-    const drawHelixElements = () => {
-      const helixX = canvas.width * 0.15;
-      const time = Date.now() * 0.001;
-      
-      for (let i = 0; i < 10; i++) {
-        const y = (i * 80 + time * 30) % canvas.height;
-        const offset = Math.sin(time + i * 0.5) * 40; // Increased from 30 to 40
-        
-        ctx.strokeStyle = 'rgba(236, 72, 153, 0.15)'; // Increased from 0.1 to 0.15
-        ctx.lineWidth = 1.5; // Increased from 1 to 1.5
-        ctx.beginPath();
-        ctx.moveTo(helixX - offset, y);
-        ctx.lineTo(helixX + offset, y);
-        ctx.stroke();
-      }
-    };
-
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw helix elements
-      drawHelixElements();
-
-      // Draw grid cells (array visualization)
-      gridCells.forEach(cell => {
-        cell.update();
-        cell.draw();
-      });
 
       // Draw data streams
       dataStreams.forEach(stream => {
