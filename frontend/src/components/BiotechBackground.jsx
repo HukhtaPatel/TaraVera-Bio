@@ -10,7 +10,6 @@ const BiotechBackground = () => {
     const ctx = canvas.getContext('2d');
     let animationFrameId;
     let dataPoints = [];
-    let dataStreams = [];
 
     // Set canvas size
     const resizeCanvas = () => {
