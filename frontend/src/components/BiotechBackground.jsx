@@ -129,11 +129,6 @@ const BiotechBackground = () => {
       dataPoints.push(new DataPoint());
     }
 
-    const streamCount = 15;
-    for (let i = 0; i < streamCount; i++) {
-      dataStreams.push(new DataStream());
-    }
-
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
