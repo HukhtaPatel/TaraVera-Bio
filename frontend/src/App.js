@@ -1,16 +1,15 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import BiotechBackground from "./components/BiotechBackground";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ScientificApproach from "./components/ScientificApproach";
-import Technology from "./components/Technology";
-import Team from "./components/Team";
-import Investment from "./components/Investment";
-import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Science from "./pages/Science";
+import Programme from "./pages/Programme";
+import AboutUs from "./pages/AboutUs";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -20,22 +19,13 @@ function App() {
         <BrowserRouter>
           <Header />
           <main>
-            <Hero />
-            <div id="science">
-              <ScientificApproach />
-            </div>
-            <div id="platform">
-              <Technology />
-            </div>
-            <div id="team">
-              <Team />
-            </div>
-            <div id="investment">
-              <Investment />
-            </div>
-            <div id="contact">
-              <CTA />
-            </div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/science" element={<Science />} />
+              <Route path="/programme" element={<Programme />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/news" element={<News />} />
+            </Routes>
           </main>
           <Footer />
         </BrowserRouter>
