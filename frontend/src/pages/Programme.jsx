@@ -84,21 +84,21 @@ const Programme = () => {
             {/* Desktop/Tablet: Horizontal Layout */}
             <div className="hidden md:block">
               {/* Steps Row */}
-              <div className="flex items-center justify-center gap-1 lg:gap-2 mb-8">
+              <div className="flex items-stretch justify-center gap-1 lg:gap-2 mb-10">
                 {developmentSteps.map((step, index) => (
                   <React.Fragment key={index}>
                     {/* Step Box */}
                     <div 
-                      className="flex-shrink-0 w-[100px] lg:w-[120px] h-[140px] lg:h-[160px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center p-3"
+                      className="flex-shrink-0 w-[90px] lg:w-[110px] xl:w-[130px] min-h-[160px] lg:min-h-[180px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center p-3"
                     >
-                      <span className="text-white text-xs lg:text-sm font-semibold text-center leading-tight whitespace-pre-line italic">
+                      <span className="text-white text-[11px] lg:text-xs xl:text-sm font-semibold text-center leading-tight whitespace-pre-line italic">
                         {step}
                       </span>
                     </div>
                     
                     {/* Arrow (not after last item) */}
                     {index < developmentSteps.length - 1 && (
-                      <div className="flex-shrink-0 w-4 lg:w-6">
+                      <div className="flex-shrink-0 w-3 lg:w-5 flex items-center">
                         <svg 
                           viewBox="0 0 24 24" 
                           fill="none" 
@@ -118,23 +118,28 @@ const Programme = () => {
                 ))}
               </div>
 
-              {/* Funding Stages Row */}
-              <div className="flex justify-center gap-4 lg:gap-6 mt-12">
-                {fundingStages.map((stage, index) => (
-                  <div 
-                    key={index}
-                    className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center px-8 lg:px-12 py-6 lg:py-8"
-                    style={{ 
-                      width: `${(stage.span / 8) * 100}%`,
-                      maxWidth: stage.span === 2 ? '200px' : stage.span === 4 ? '400px' : '200px',
-                      minWidth: stage.span === 2 ? '140px' : stage.span === 4 ? '280px' : '140px'
-                    }}
-                  >
-                    <span className="text-white text-lg lg:text-xl font-semibold italic">
-                      {stage.label}
+              {/* Funding Stages Row - Aligned with steps */}
+              <div className="flex justify-center">
+                <div className="flex gap-3 lg:gap-4">
+                  {/* PreSeed - spans steps 1-2 */}
+                  <div className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center py-8 lg:py-10 w-[180px] lg:w-[230px] xl:w-[280px]">
+                    <span className="text-white text-base lg:text-lg xl:text-xl font-semibold italic">
+                      PreSeed
                     </span>
                   </div>
-                ))}
+                  {/* Seed - spans steps 3-6 */}
+                  <div className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center py-8 lg:py-10 w-[360px] lg:w-[460px] xl:w-[560px]">
+                    <span className="text-white text-base lg:text-lg xl:text-xl font-semibold italic">
+                      Seed
+                    </span>
+                  </div>
+                  {/* Series A - spans steps 7-8 */}
+                  <div className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center py-8 lg:py-10 w-[180px] lg:w-[230px] xl:w-[280px]">
+                    <span className="text-white text-base lg:text-lg xl:text-xl font-semibold italic">
+                      Series A
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
