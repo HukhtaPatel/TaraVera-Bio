@@ -1,19 +1,23 @@
 import React from 'react';
-import { Target, CheckCircle, ArrowRight } from 'lucide-react';
+import { Target, CheckCircle } from 'lucide-react';
 
 const Programme = () => {
   const developmentSteps = [
-    'Target validation (genetic)',
-    'Assay readiness / pilot screen',
-    'Lead generation',
-    'Lead optimisation',
-    'In vivo proof of mechanism',
-    'Therapeutic window assessment',
-    'Safety / tolerability in human',
-    'Proof of concept in human',
+    'Target\nValidation\n(Genetic)',
+    'Assay\nreadiness /\npilot screen',
+    'Lead\ngeneration',
+    'Lead\nOptimisation',
+    'In-vivo proof\nof\nmechanism',
+    'Therapeutic\nWindow\nassessment',
+    'Safety /\nTolerability in\nhuman',
+    'POC in\nHuman',
   ];
 
-  const fundingStages = ['Pre-seed', 'Seed', 'Series A'];
+  const fundingStages = [
+    { label: 'PreSeed', span: 2 },
+    { label: 'Seed', span: 4 },
+    { label: 'Series A', span: 2 },
+  ];
 
   return (
     <section className="pt-28 pb-24 bg-white dark:bg-gray-900 min-h-screen" data-testid="programme-page">
@@ -25,7 +29,7 @@ const Programme = () => {
           </h1>
         </div>
 
-        {/* Lead Programme Section (merged from Lead page) */}
+        {/* Lead Programme Section */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
@@ -67,70 +71,125 @@ const Programme = () => {
 
         {/* Development Pathway */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-12 text-center">
             Development Pathway
           </h2>
           
-          {/* Desktop: Horizontal Timeline */}
-          <div className="hidden lg:block">
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
-              
-              {/* Steps */}
-              <div className="grid grid-cols-8 gap-2">
+          {/* Development Pathway Graphic */}
+          <div 
+            className="w-full"
+            role="img"
+            aria-label="Programme development pathway from target validation to proof of concept, with funding stages PreSeed, Seed, and Series A."
+          >
+            {/* Desktop/Tablet: Horizontal Layout */}
+            <div className="hidden md:block">
+              {/* Steps Row */}
+              <div className="flex items-center justify-center gap-1 lg:gap-2 mb-8">
                 {developmentSteps.map((step, index) => (
-                  <div key={index} className="relative flex flex-col items-center">
-                    <div className="w-4 h-4 bg-white dark:bg-gray-800 border-4 border-blue-500 dark:border-blue-400 rounded-full z-10 mb-4"></div>
-                    <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700 text-center min-h-[80px] flex items-center justify-center">
-                      <span className="text-xs font-medium text-gray-700 dark:text-gray-300">{step}</span>
+                  <React.Fragment key={index}>
+                    {/* Step Box */}
+                    <div 
+                      className="flex-shrink-0 w-[100px] lg:w-[120px] h-[140px] lg:h-[160px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center p-3"
+                    >
+                      <span className="text-white text-xs lg:text-sm font-semibold text-center leading-tight whitespace-pre-line italic">
+                        {step}
+                      </span>
                     </div>
+                    
+                    {/* Arrow (not after last item) */}
+                    {index < developmentSteps.length - 1 && (
+                      <div className="flex-shrink-0 w-4 lg:w-6">
+                        <svg 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          className="w-full h-6 text-gray-300 dark:text-gray-500"
+                        >
+                          <path 
+                            d="M9 6l6 6-6 6" 
+                            stroke="currentColor" 
+                            strokeWidth="3" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+
+              {/* Funding Stages Row */}
+              <div className="flex justify-center gap-4 lg:gap-6 mt-12">
+                {fundingStages.map((stage, index) => (
+                  <div 
+                    key={index}
+                    className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center px-8 lg:px-12 py-6 lg:py-8"
+                    style={{ 
+                      width: `${(stage.span / 8) * 100}%`,
+                      maxWidth: stage.span === 2 ? '200px' : stage.span === 4 ? '400px' : '200px',
+                      minWidth: stage.span === 2 ? '140px' : stage.span === 4 ? '280px' : '140px'
+                    }}
+                  >
+                    <span className="text-white text-lg lg:text-xl font-semibold italic">
+                      {stage.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile: Vertical Layout */}
+            <div className="md:hidden">
+              {/* Steps Column */}
+              <div className="flex flex-col items-center gap-3 mb-8">
+                {developmentSteps.map((step, index) => (
+                  <React.Fragment key={index}>
+                    {/* Step Box */}
+                    <div 
+                      className="w-full max-w-[280px] h-[80px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center p-4"
+                    >
+                      <span className="text-white text-sm font-semibold text-center leading-tight italic">
+                        {step.replace(/\n/g, ' ')}
+                      </span>
+                    </div>
+                    
+                    {/* Arrow (not after last item) */}
+                    {index < developmentSteps.length - 1 && (
+                      <div className="h-4">
+                        <svg 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          className="w-6 h-full text-gray-300 dark:text-gray-500"
+                        >
+                          <path 
+                            d="M6 9l6 6 6-6" 
+                            stroke="currentColor" 
+                            strokeWidth="3" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+
+              {/* Funding Stages - Vertical on Mobile */}
+              <div className="flex flex-col items-center gap-3 mt-8">
+                {fundingStages.map((stage, index) => (
+                  <div 
+                    key={index}
+                    className="w-full max-w-[280px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center px-6 py-5"
+                  >
+                    <span className="text-white text-lg font-semibold italic">
+                      {stage.label}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-
-          {/* Mobile/Tablet: Vertical Timeline */}
-          <div className="lg:hidden">
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
-              
-              {/* Steps */}
-              <div className="space-y-4">
-                {developmentSteps.map((step, index) => (
-                  <div key={index} className="relative flex items-center gap-4 pl-12">
-                    <div className="absolute left-2 w-4 h-4 bg-white dark:bg-gray-800 border-4 border-blue-500 dark:border-blue-400 rounded-full"></div>
-                    <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 flex-1">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{step}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Funding Stages */}
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            {fundingStages.map((stage, index) => (
-              <React.Fragment key={stage}>
-                <div className="px-6 py-3 bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 rounded-full border border-green-200 dark:border-green-800">
-                  <span className="font-semibold text-gray-800 dark:text-gray-200">{stage}</span>
-                </div>
-                {index < fundingStages.length - 1 && (
-                  <ArrowRight className="w-6 h-6 text-gray-400 dark:text-gray-600 self-center" />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-
-        {/* Visual Direction Note - Simplified pathway graphic */}
-        <div className="text-center text-sm text-gray-500 dark:text-gray-500 mt-8">
-          <p className="italic">
-            Alt text: "Simplified programme development pathway from target validation to proof of concept."
-          </p>
         </div>
       </div>
     </section>
