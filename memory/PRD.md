@@ -88,6 +88,17 @@ Build a professional, modern, and minimalist landing page for a biotech company 
 - ✅ Maintained dark mode functionality across all pages
 - ✅ Mobile responsive design with hamburger menu
 
+### December 2025 - Home Page Redesign
+- ✅ Full-screen hero with scientific background image and dark overlay
+- ✅ Large, bold typography with gradient text effect
+- ✅ Minimalist design with ample white space
+- ✅ Card-based "Our Approach" section with 4 feature cards (Biology, Biomarkers, Programme, About Us)
+- ✅ Philosophy section with floating stats card ("2026 Founded")
+- ✅ Latest News preview card section
+- ✅ Scroll indicator animation on hero
+- ✅ Seamless transitions and hover effects
+- ✅ Fully responsive on mobile devices
+
 ### Previous Session
 - ✅ Dark mode toggle
 - ✅ Custom animated biotech background
