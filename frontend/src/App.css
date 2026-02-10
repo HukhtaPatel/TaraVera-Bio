@@ -8,6 +8,20 @@ html {
     position: relative;
 }
 
+/* Slow pulse animation for hero overlay */
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+}
+
 /* Animated gradient background */
 @keyframes gradient-shift {
     0% {
