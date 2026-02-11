@@ -195,15 +195,17 @@ const Home = () => {
                   By intervening earlier and more precisely in the biology that drives disease, we aim to change the trajectory of brain disorders — <span className="text-gray-900 dark:text-gray-100 font-medium">from inevitable to hopeful.</span>
                 </p>
               </div>
-              <Link to="/about">
-                <button 
-                  className="group inline-flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium transition-all duration-300 hover:shadow-xl hover:scale-105"
-                  data-testid="meet-team-btn"
-                >
-                  Meet Our Team
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
-              </Link>
+              <div className="pt-4">
+                <Link to="/about">
+                  <button 
+                    className="group inline-flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium transition-all duration-300 hover:shadow-xl hover:scale-105"
+                    data-testid="meet-team-btn"
+                  >
+                    Meet Our Team
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </Link>
+              </div>
             </div>
 
             {/* Visual Element */}
