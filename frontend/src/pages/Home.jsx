@@ -227,8 +227,8 @@ const Home = () => {
               </div>
               {/* Floating Stats Card */}
               <div className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">2026</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Founded</div>
+                <div className="font-display text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">2026</div>
+                <div className="font-body text-sm text-gray-600 dark:text-gray-400">Founded</div>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ const Home = () => {
       <section className="relative py-24 md:py-32 bg-gray-50 dark:bg-gray-800/50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Latest News
             </h2>
           </div>
@@ -249,18 +249,18 @@ const Home = () => {
             className="group block bg-white dark:bg-gray-900 rounded-2xl p-8 md:p-10 border border-gray-200 dark:border-gray-700 transition-all duration-500 hover:shadow-2xl hover:border-blue-500/30 dark:hover:border-blue-400/30"
             data-testid="news-preview-card"
           >
-            <div className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 font-medium mb-4">
+            <div className="font-body flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 font-medium mb-4">
               <span>January 2026</span>
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
               <span>Company News</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
               TaraVera Bio formation
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            <p className="font-body text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               TaraVera Bio was founded on the belief that better outcomes will come not from louder promises, but from deeper science.
             </p>
-            <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium">
+            <div className="font-body flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium">
               Read more
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </div>
