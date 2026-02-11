@@ -3,29 +3,40 @@ import { Brain, Activity, Heart } from 'lucide-react';
 
 const Science = () => {
   return (
-    <section className="pt-28 pb-24 bg-white dark:bg-gray-900 min-h-screen" data-testid="science-page">
-      {/* Background diagram placeholder */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-3 pointer-events-none overflow-hidden">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
-          {/* Simplified tau pathology loop diagram */}
-          <circle cx="500" cy="500" r="300" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="10,5" className="text-blue-500" />
-          <circle cx="500" cy="500" r="200" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5,5" className="text-purple-500" />
-          <circle cx="500" cy="500" r="100" fill="none" stroke="currentColor" strokeWidth="1" className="text-blue-400" />
-          {/* Arrows indicating cycle */}
-          <path d="M500 200 L520 220 L480 220 Z" fill="currentColor" className="text-blue-500" />
-          <path d="M800 500 L780 520 L780 480 Z" fill="currentColor" className="text-purple-500" />
-          <path d="M500 800 L480 780 L520 780 Z" fill="currentColor" className="text-blue-500" />
-          <path d="M200 500 L220 480 L220 520 Z" fill="currentColor" className="text-purple-500" />
-        </svg>
-      </div>
+    <section className="bg-white dark:bg-gray-900 min-h-screen" data-testid="science-page">
+      {/* Hero Section with Video Background */}
+      <div className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source 
+              src="https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/84j4ak63_u4641913973_Minimal_scientific_infographic_of_a_protein_amino_563f1493-d7df-494f-9730-deb499f3244a_0.mp4" 
+              type="video/mp4" 
+            />
+          </video>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/60 to-gray-900/80 dark:from-black/75 dark:via-black/65 dark:to-black/85"></div>
+        </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
             Science
           </h1>
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+            Understanding the biology that drives neurodegeneration
+          </p>
         </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
 
         {/* Section 1: Biology */}
         <div className="mb-20">
