@@ -124,6 +124,28 @@ code {
     body {
         @apply bg-background text-foreground;
     }
+    
+    /* Typography utilities */
+    .font-display {
+        font-family: var(--font-display);
+    }
+    .font-body {
+        font-family: var(--font-body);
+    }
+    
+    /* Lead text */
+    .text-lead {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+    
+    /* Caption text */
+    .text-caption {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        font-weight: 400;
+    }
 }
 
 @layer base {
