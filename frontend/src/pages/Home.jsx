@@ -118,11 +118,11 @@ const Home = () => {
       <section className="relative py-24 md:py-32 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="space-y-8 text-center">
-            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-light">
+            <p className="font-body text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-normal">
               TaraVera Bio is building first-in-class therapeutics that target disease-modifying pathways in neurodegeneration.
             </p>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto"></div>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="font-body text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
               We focus on compelling human biology and translate it into safe, differentiated small-molecule medicines, guided by robust scientific data and a clear line of sight to the clinic.
             </p>
           </div>
@@ -134,10 +134,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Our Approach
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="font-body text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Combining the rigour of big pharma with the agility of a precision biotech.
             </p>
           </div>
