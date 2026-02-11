@@ -44,7 +44,7 @@ const AboutUs = () => {
     {
       name: 'Sian Lewis',
       title: 'Co-Founder and Head of Drug Discovery',
-      photo: null,
+      photo: 'https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/djz001mn_image.png',
       bio: 'Sian is a seasoned pharmacologist with over 25 years of experience leading early-stage drug discovery teams across major Pharma and biotech organisations. She is recognised for building inclusive, high-performing teams and for guiding complex programmes through clear scientific governance and milestone-driven decision making.',
       highlights: 'Sian brings deep expertise in pharmacology, screening strategy, and external collaboration, with a leadership style grounded in mentorship, clarity, and delivery.',
       background: 'Built her experience in drug discovery at GSK, Eisai, Millennium and most recently as head of cellular pharmacology at MSD UK.',
