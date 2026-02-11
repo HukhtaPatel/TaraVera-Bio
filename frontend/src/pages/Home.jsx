@@ -94,7 +94,7 @@ const Home = () => {
           </p>
 
           {/* CTA Button */}
-          <Link to="/programme">
+          <Link to="/science">
             <button 
               className="group inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-lg font-medium transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:scale-105"
               data-testid="explore-science-btn"
