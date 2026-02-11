@@ -151,9 +151,9 @@ const Programme = () => {
                   <React.Fragment key={index}>
                     {/* Step Box */}
                     <div 
-                      className="w-full max-w-[280px] h-[80px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center p-4"
+                      className="w-full max-w-[280px] min-h-[70px] bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 rounded-xl flex items-center justify-center p-4 shadow-lg"
                     >
-                      <span className="text-white text-sm font-semibold text-center leading-tight italic">
+                      <span className="text-white text-sm font-medium text-center leading-tight">
                         {step.replace(/\n/g, ' ')}
                       </span>
                     </div>
@@ -164,12 +164,12 @@ const Programme = () => {
                         <svg 
                           viewBox="0 0 24 24" 
                           fill="none" 
-                          className="w-6 h-full text-gray-300 dark:text-gray-500"
+                          className="w-5 h-full text-blue-300 dark:text-blue-400"
                         >
                           <path 
                             d="M6 9l6 6 6-6" 
                             stroke="currentColor" 
-                            strokeWidth="3" 
+                            strokeWidth="2.5" 
                             strokeLinecap="round" 
                             strokeLinejoin="round"
                           />
@@ -182,16 +182,21 @@ const Programme = () => {
 
               {/* Funding Stages - Vertical on Mobile */}
               <div className="flex flex-col items-center gap-3 mt-8">
-                {fundingStages.map((stage, index) => (
-                  <div 
-                    key={index}
-                    className="w-full max-w-[280px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center px-6 py-5"
-                  >
-                    <span className="text-white text-lg font-semibold italic">
-                      {stage.label}
-                    </span>
-                  </div>
-                ))}
+                <div className="w-full max-w-[280px] bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 border border-blue-200 dark:border-blue-700 rounded-xl flex items-center justify-center px-6 py-4 shadow-md">
+                  <span className="text-gray-800 dark:text-gray-200 text-base font-semibold">
+                    PreSeed
+                  </span>
+                </div>
+                <div className="w-full max-w-[280px] bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border border-purple-200 dark:border-purple-700 rounded-xl flex items-center justify-center px-6 py-4 shadow-md">
+                  <span className="text-gray-800 dark:text-gray-200 text-base font-semibold">
+                    Seed
+                  </span>
+                </div>
+                <div className="w-full max-w-[280px] bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 border border-pink-200 dark:border-pink-700 rounded-xl flex items-center justify-center px-6 py-4 shadow-md">
+                  <span className="text-gray-800 dark:text-gray-200 text-base font-semibold">
+                    Series A
+                  </span>
+                </div>
               </div>
             </div>
           </div>
