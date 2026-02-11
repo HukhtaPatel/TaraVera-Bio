@@ -84,30 +84,30 @@ const Programme = () => {
             {/* Desktop/Tablet: Horizontal Layout */}
             <div className="hidden md:block">
               {/* Steps Row */}
-              <div className="flex items-stretch justify-center gap-1 lg:gap-2 mb-10">
+              <div className="flex items-stretch justify-center gap-2 lg:gap-3 mb-10">
                 {developmentSteps.map((step, index) => (
                   <React.Fragment key={index}>
                     {/* Step Box */}
                     <div 
-                      className="flex-shrink-0 w-[90px] lg:w-[110px] xl:w-[130px] min-h-[160px] lg:min-h-[180px] bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center p-3"
+                      className="flex-shrink-0 w-[90px] lg:w-[110px] xl:w-[130px] min-h-[160px] lg:min-h-[180px] bg-gradient-to-br from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 rounded-2xl flex items-center justify-center p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                     >
-                      <span className="text-white text-[11px] lg:text-xs xl:text-sm font-semibold text-center leading-tight whitespace-pre-line italic">
+                      <span className="text-white text-[11px] lg:text-xs xl:text-sm font-medium text-center leading-tight whitespace-pre-line">
                         {step}
                       </span>
                     </div>
                     
                     {/* Arrow (not after last item) */}
                     {index < developmentSteps.length - 1 && (
-                      <div className="flex-shrink-0 w-3 lg:w-5 flex items-center">
+                      <div className="flex-shrink-0 w-4 lg:w-5 flex items-center">
                         <svg 
                           viewBox="0 0 24 24" 
                           fill="none" 
-                          className="w-full h-6 text-gray-300 dark:text-gray-500"
+                          className="w-full h-5 text-blue-300 dark:text-blue-400"
                         >
                           <path 
                             d="M9 6l6 6-6 6" 
                             stroke="currentColor" 
-                            strokeWidth="3" 
+                            strokeWidth="2.5" 
                             strokeLinecap="round" 
                             strokeLinejoin="round"
                           />
@@ -120,22 +120,22 @@ const Programme = () => {
 
               {/* Funding Stages Row - Aligned with steps */}
               <div className="flex justify-center">
-                <div className="flex gap-3 lg:gap-4">
+                <div className="flex gap-4 lg:gap-6">
                   {/* PreSeed - spans steps 1-2 */}
-                  <div className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center py-8 lg:py-10 w-[180px] lg:w-[230px] xl:w-[280px]">
-                    <span className="text-white text-base lg:text-lg xl:text-xl font-semibold italic">
+                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 border border-blue-200 dark:border-blue-700 rounded-2xl flex items-center justify-center py-6 lg:py-8 w-[180px] lg:w-[230px] xl:w-[280px] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span className="text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
                       PreSeed
                     </span>
                   </div>
                   {/* Seed - spans steps 3-6 */}
-                  <div className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center py-8 lg:py-10 w-[360px] lg:w-[460px] xl:w-[560px]">
-                    <span className="text-white text-base lg:text-lg xl:text-xl font-semibold italic">
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border border-purple-200 dark:border-purple-700 rounded-2xl flex items-center justify-center py-6 lg:py-8 w-[360px] lg:w-[460px] xl:w-[560px] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span className="text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
                       Seed
                     </span>
                   </div>
                   {/* Series A - spans steps 7-8 */}
-                  <div className="bg-[#1a5f7a] dark:bg-[#1a5f7a] rounded-xl flex items-center justify-center py-8 lg:py-10 w-[180px] lg:w-[230px] xl:w-[280px]">
-                    <span className="text-white text-base lg:text-lg xl:text-xl font-semibold italic">
+                  <div className="bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 border border-pink-200 dark:border-pink-700 rounded-2xl flex items-center justify-center py-6 lg:py-8 w-[180px] lg:w-[230px] xl:w-[280px] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span className="text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
                       Series A
                     </span>
                   </div>
