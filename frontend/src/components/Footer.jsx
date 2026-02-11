@@ -20,7 +20,7 @@ const Footer = () => {
               alt="TaraVera Bio Logo" 
               className="h-10 w-auto mb-4 transition-opacity duration-300"
             />
-            <p className="text-gray-400 dark:text-gray-500 leading-relaxed mb-6">
+            <p className="font-body text-gray-400 dark:text-gray-500 leading-relaxed mb-6">
               TaraVera Bio is building first-in-class therapeutics that target disease-modifying pathways in neurodegeneration. We focus on compelling human biology and translate it into safe, differentiated small-molecule medicines.
             </p>
             <div className="flex items-center gap-4">
@@ -43,8 +43,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="font-body space-y-3">
               <li>
                 <Link to="/" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200">
                   Home
@@ -75,8 +75,8 @@ const Footer = () => {
 
           {/* About Us Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">About Us</h4>
-            <ul className="space-y-3 text-gray-400 dark:text-gray-500">
+            <h4 className="font-display text-lg font-semibold mb-4">About Us</h4>
+            <ul className="font-body space-y-3 text-gray-400 dark:text-gray-500">
               <li>
                 <Link to="/about#vision-and-values" className="hover:text-white transition-colors duration-200">
                   Vision and Values
@@ -94,10 +94,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 dark:border-gray-900">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-500 dark:text-gray-600 text-sm">
+            <p className="font-body text-gray-500 dark:text-gray-600 text-sm">
               © 2026 TaraVera Bio. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-sm">
+            <div className="font-body flex items-center gap-6 text-sm">
               <a href="#" className="text-gray-500 dark:text-gray-600 hover:text-white transition-colors duration-200">
                 Privacy Policy
               </a>
