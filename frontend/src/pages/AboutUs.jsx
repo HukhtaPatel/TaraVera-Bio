@@ -33,6 +33,7 @@ const AboutUs = () => {
     {
       name: 'Radha Desai, PhD',
       title: 'Co-Founder and CEO/CSO',
+      photo: 'https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/hp7wtiw9_image.png',
       bio: 'Radha is a biotech entrepreneur and experienced drug discovery leader with over 20 years of academic and industry experience in neurodegeneration and mitochondrial biology. She has led multidisciplinary research programmes, translating complex biological insights into viable therapeutic candidates. Her scientific work has been published in leading journals including Science Advances and Brain.',
       highlights: 'Radha brings a distinctive ability to bridge bold scientific innovation with disciplined execution, building capital-efficient programmes with a clear focus on patient impact.',
       background: 'PhD in Neuroscience from UCL, postdoctoral training from NIMR (Mill Hill) and Royal Veterinary College. Started her Pharma career at Pfizer, most recently as drug hunter at MSD UK.',
@@ -43,6 +44,7 @@ const AboutUs = () => {
     {
       name: 'Sian Lewis',
       title: 'Co-Founder and Head of Drug Discovery',
+      photo: null,
       bio: 'Sian is a seasoned pharmacologist with over 25 years of experience leading early-stage drug discovery teams across major Pharma and biotech organisations. She is recognised for building inclusive, high-performing teams and for guiding complex programmes through clear scientific governance and milestone-driven decision making.',
       highlights: 'Sian brings deep expertise in pharmacology, screening strategy, and external collaboration, with a leadership style grounded in mentorship, clarity, and delivery.',
       background: 'Built her experience in drug discovery at GSK, Eisai, Millennium and most recently as head of cellular pharmacology at MSD UK.',
