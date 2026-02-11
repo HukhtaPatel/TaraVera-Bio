@@ -87,7 +87,7 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 text-center">
           {/* Large Typography */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white leading-[1.1]">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white leading-[1.1]">
             Precision where
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -96,14 +96,14 @@ const Home = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 dark:text-gray-400 mb-12 font-light tracking-wide">
+          <p className="font-body text-xl sm:text-2xl md:text-3xl text-gray-300 dark:text-gray-400 mb-12 font-light tracking-wide">
             Small-molecule medicines for neurodegeneration.
           </p>
 
           {/* CTA Button */}
           <Link to="/science">
             <button 
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-lg font-medium transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:scale-105"
+              className="font-body group inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-lg font-semibold transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:scale-105"
               data-testid="explore-science-btn"
             >
               Explore Our Science
