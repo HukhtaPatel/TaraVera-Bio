@@ -65,13 +65,20 @@ const Home = () => {
     <div className="relative" data-testid="home-page">
       {/* Hero Section - Full Screen with Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
+        {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1920&q=80"
-            alt="Scientific research background showing neural connections"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
-          />
+          >
+            <source 
+              src="https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/f9ga34hf_u4641913973_Seamless_looping_video_5_seconds._Abstract_neural_60a1068f-55bb-419a-a71c-5f79bb97f327_0.mp4" 
+              type="video/mp4" 
+            />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/70 to-gray-900/90 dark:from-black/85 dark:via-black/75 dark:to-black/95"></div>
           {/* Subtle animated gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20 animate-pulse-slow"></div>
