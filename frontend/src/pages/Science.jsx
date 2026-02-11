@@ -26,10 +26,10 @@ const Science = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
             Science
           </h1>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+          <p className="font-body text-xl text-gray-200 max-w-2xl mx-auto">
             Understanding the biology that drives neurodegeneration
           </p>
         </div>
@@ -44,16 +44,16 @@ const Science = () => {
             <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
               Biology — What drives disease progression
             </h2>
           </div>
           
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <p className="text-lg text-blue-600 dark:text-blue-400 font-medium mb-6">
+            <p className="font-body text-lg text-blue-600 dark:text-blue-400 font-medium mb-6">
               Pathological tau accumulation tracks with neurodegeneration and clinical decline.
             </p>
-            <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+            <div className="font-body space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
               <p>
                 Under healthy conditions, tau levels are tightly controlled through post-translational modifications that regulate stability, localization, and clearance. In disease, this balance breaks down: pathogenic tau species accumulate, evade clearance pathways, and propagate toxicity across vulnerable neural circuits.
               </p>
@@ -70,16 +70,16 @@ const Science = () => {
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center">
               <Activity className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
               Biomarker — How we measure and translate biology
             </h2>
           </div>
           
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <p className="text-lg text-purple-600 dark:text-purple-400 font-medium mb-6">
+            <p className="font-body text-lg text-purple-600 dark:text-purple-400 font-medium mb-6">
               Tau is now a dynamic, measurable signal of disease.
             </p>
-            <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+            <div className="font-body space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
               <p>
                 Advances in tau detection — including fluid biomarkers and imaging technologies — allow sensitive tracking of tau pathology over time. These tools link molecular mechanism to patient biology, enabling:
               </p>
@@ -101,16 +101,16 @@ const Science = () => {
             <div className="w-12 h-12 bg-pink-100 dark:bg-pink-900/50 rounded-lg flex items-center justify-center">
               <Heart className="w-6 h-6 text-pink-600 dark:text-pink-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
               Patient Benefit — Why tau clearance matters
             </h2>
           </div>
           
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-            <p className="text-lg text-pink-600 dark:text-pink-400 font-medium mb-6">
+            <p className="font-body text-lg text-pink-600 dark:text-pink-400 font-medium mb-6">
               Reducing pathogenic tau addresses a root driver of neurodegeneration.
             </p>
-            <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+            <div className="font-body space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
               <p>
                 Enhancing clearance of toxic tau species relieves cellular stress, preserves synaptic integrity, and disrupts the self-reinforcing cycle of neuronal damage. By intervening upstream — before irreversible loss accumulates — tau reduction has the potential to slow progression and meaningfully alter outcomes for patients.
               </p>
