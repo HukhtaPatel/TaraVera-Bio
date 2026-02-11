@@ -161,15 +161,15 @@ const Home = () => {
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+                  <h3 className="font-display text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
                     {card.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                  <p className="font-body text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
                     {card.description}
                   </p>
                   
                   {/* Arrow */}
-                  <div className={`flex items-center gap-2 ${colors.icon} text-sm font-medium`}>
+                  <div className={`font-body flex items-center gap-2 ${colors.icon} text-sm font-medium`}>
                     Learn more
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -191,21 +191,21 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Content */}
             <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
                 Changing the trajectory of brain disorders
               </h2>
               <div className="space-y-6">
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="font-body text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                   Our team brings deep pharmaceutical experience across discovery, development, and partnering, combining the rigour of big pharma with the agility of a precision biotech.
                 </p>
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="font-body text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                   By intervening earlier and more precisely in the biology that drives disease, we aim to change the trajectory of brain disorders — <span className="text-gray-900 dark:text-gray-100 font-medium">from inevitable to hopeful.</span>
                 </p>
               </div>
               <div className="pt-4">
                 <Link to="/about">
                   <button 
-                    className="group inline-flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium transition-all duration-300 hover:shadow-xl hover:scale-105"
+                    className="font-body group inline-flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
                     data-testid="meet-team-btn"
                   >
                     Meet Our Team
