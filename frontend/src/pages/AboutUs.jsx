@@ -208,10 +208,18 @@ const AboutUs = () => {
                   {/* Header with gradient */}
                   <div className={`bg-gradient-to-r ${gradientClasses[member.color]} p-6 text-white`}>
                     <div className="flex items-center gap-4">
-                      {/* Avatar placeholder */}
-                      <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-2xl font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
-                      </div>
+                      {/* Avatar */}
+                      {member.photo ? (
+                        <img 
+                          src={member.photo} 
+                          alt={member.name}
+                          className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-2 border-white/30"
+                        />
+                      ) : (
+                        <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-2xl font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
+                        </div>
+                      )}
                       <div>
                         <h3 className="text-xl md:text-2xl font-bold mb-1">
                           {member.name}
