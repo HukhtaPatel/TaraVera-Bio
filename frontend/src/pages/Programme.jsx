@@ -13,18 +13,12 @@ const Programme = () => {
     'POC in\nHuman',
   ];
 
-  const fundingStages = [
-    { label: 'PreSeed', span: 2 },
-    { label: 'Seed', span: 4 },
-    { label: 'Series A', span: 2 },
-  ];
-
   return (
     <section className="pt-28 pb-24 bg-white dark:bg-gray-900 min-h-screen" data-testid="programme-page">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Programme
           </h1>
         </div>
@@ -35,17 +29,17 @@ const Programme = () => {
             <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
               <Target className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
               Lead Programme
             </h2>
           </div>
 
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl p-8 md:p-10 border border-blue-200 dark:border-blue-800 mb-8">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Restoring Tau Homeostasis Through Enzymatic Control
             </h3>
             
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="font-body space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 TaraVera Bio's lead programme is centred on enzymatic inhibition to re-establish healthy tau homeostasis. By precisely modulating an upstream enzymatic pathway, the programme enhances endogenous clearance mechanisms to selectively reduce pathogenic tau species while preserving normal physiological function.
               </p>
@@ -62,7 +56,7 @@ const Programme = () => {
           <div className="bg-blue-600 dark:bg-blue-700 rounded-xl p-6 md:p-8 mb-16">
             <div className="flex items-center gap-4">
               <CheckCircle className="w-8 h-8 text-white flex-shrink-0" />
-              <p className="text-lg md:text-xl font-bold text-white">
+              <p className="font-display text-lg md:text-xl font-bold text-white">
                 Outcome: a first-in-class, disease-modifying programme with a clear line of sight to clinical impact.
               </p>
             </div>
@@ -71,7 +65,7 @@ const Programme = () => {
 
         {/* Development Pathway */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-12 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-12 text-center">
             Development Pathway
           </h2>
           
@@ -91,7 +85,7 @@ const Programme = () => {
                     <div 
                       className="flex-shrink-0 w-[90px] lg:w-[110px] xl:w-[130px] min-h-[160px] lg:min-h-[180px] bg-gradient-to-br from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 rounded-2xl flex items-center justify-center p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                     >
-                      <span className="text-white text-[11px] lg:text-xs xl:text-sm font-medium text-center leading-tight whitespace-pre-line">
+                      <span className="font-body text-white text-[11px] lg:text-xs xl:text-sm font-medium text-center leading-tight whitespace-pre-line">
                         {step}
                       </span>
                     </div>
@@ -123,19 +117,19 @@ const Programme = () => {
                 <div className="flex gap-4 lg:gap-6">
                   {/* PreSeed - spans steps 1-2 */}
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 border border-blue-200 dark:border-blue-700 rounded-2xl flex items-center justify-center py-6 lg:py-8 w-[180px] lg:w-[230px] xl:w-[280px] shadow-md hover:shadow-lg transition-all duration-300">
-                    <span className="text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
+                    <span className="font-display text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
                       PreSeed
                     </span>
                   </div>
                   {/* Seed - spans steps 3-6 */}
                   <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border border-purple-200 dark:border-purple-700 rounded-2xl flex items-center justify-center py-6 lg:py-8 w-[360px] lg:w-[460px] xl:w-[560px] shadow-md hover:shadow-lg transition-all duration-300">
-                    <span className="text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
+                    <span className="font-display text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
                       Seed
                     </span>
                   </div>
                   {/* Series A - spans steps 7-8 */}
                   <div className="bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 border border-pink-200 dark:border-pink-700 rounded-2xl flex items-center justify-center py-6 lg:py-8 w-[180px] lg:w-[230px] xl:w-[280px] shadow-md hover:shadow-lg transition-all duration-300">
-                    <span className="text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
+                    <span className="font-display text-gray-800 dark:text-gray-200 text-base lg:text-lg xl:text-xl font-semibold">
                       Series A
                     </span>
                   </div>
@@ -153,7 +147,7 @@ const Programme = () => {
                     <div 
                       className="w-full max-w-[280px] min-h-[70px] bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 rounded-xl flex items-center justify-center p-4 shadow-lg"
                     >
-                      <span className="text-white text-sm font-medium text-center leading-tight">
+                      <span className="font-body text-white text-sm font-medium text-center leading-tight">
                         {step.replace(/\n/g, ' ')}
                       </span>
                     </div>
@@ -183,17 +177,17 @@ const Programme = () => {
               {/* Funding Stages - Vertical on Mobile */}
               <div className="flex flex-col items-center gap-3 mt-8">
                 <div className="w-full max-w-[280px] bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 border border-blue-200 dark:border-blue-700 rounded-xl flex items-center justify-center px-6 py-4 shadow-md">
-                  <span className="text-gray-800 dark:text-gray-200 text-base font-semibold">
+                  <span className="font-display text-gray-800 dark:text-gray-200 text-base font-semibold">
                     PreSeed
                   </span>
                 </div>
                 <div className="w-full max-w-[280px] bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border border-purple-200 dark:border-purple-700 rounded-xl flex items-center justify-center px-6 py-4 shadow-md">
-                  <span className="text-gray-800 dark:text-gray-200 text-base font-semibold">
+                  <span className="font-display text-gray-800 dark:text-gray-200 text-base font-semibold">
                     Seed
                   </span>
                 </div>
                 <div className="w-full max-w-[280px] bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 border border-pink-200 dark:border-pink-700 rounded-xl flex items-center justify-center px-6 py-4 shadow-md">
-                  <span className="text-gray-800 dark:text-gray-200 text-base font-semibold">
+                  <span className="font-display text-gray-800 dark:text-gray-200 text-base font-semibold">
                     Series A
                   </span>
                 </div>
