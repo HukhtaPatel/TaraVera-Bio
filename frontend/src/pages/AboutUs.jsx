@@ -66,7 +66,7 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             About Us
           </h1>
         </div>
@@ -110,7 +110,7 @@ const AboutUs = () => {
         <div id="vision-and-values" className="mb-24 scroll-mt-28">
           {/* Vision */}
           <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Vision
             </h2>
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
@@ -122,7 +122,7 @@ const AboutUs = () => {
 
           {/* Values */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
               Values
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -157,7 +157,7 @@ const AboutUs = () => {
                         <IconComponent className={`w-6 h-6 ${iconColorClasses[value.color]}`} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
+                        <h3 className="font-display text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
                           {value.title}
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400">
@@ -178,7 +178,7 @@ const AboutUs = () => {
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-lg flex items-center justify-center">
               <Users className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
               Management Team
             </h2>
           </div>
@@ -221,7 +221,7 @@ const AboutUs = () => {
                         </div>
                       )}
                       <div>
-                        <h3 className="text-xl md:text-2xl font-bold mb-1">
+                        <h3 className="font-display text-xl md:text-2xl font-bold mb-1">
                           {member.name}
                         </h3>
                         <p className="text-white/90 font-medium">
