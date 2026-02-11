@@ -75,14 +75,14 @@ const AboutUs = () => {
         <div className="flex justify-center gap-4 mb-12">
           <button
             onClick={() => scrollToSection('vision-and-values')}
-            className="px-6 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium"
+            className="font-body px-6 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium"
             data-testid="nav-vision-values"
           >
             Vision and Values
           </button>
           <button
             onClick={() => scrollToSection('management-team')}
-            className="px-6 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium"
+            className="font-body px-6 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium"
             data-testid="nav-management-team"
           >
             Management Team
@@ -114,7 +114,7 @@ const AboutUs = () => {
               Vision
             </h2>
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed italic">
+              <p className="font-body text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed italic">
                 Innovating with integrity to improve the lives of people affected by neurodegenerative disease.
               </p>
             </div>
@@ -160,7 +160,7 @@ const AboutUs = () => {
                         <h3 className="font-display text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
                           {value.title}
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
+                        <p className="font-body text-gray-600 dark:text-gray-400">
                           {value.description}
                         </p>
                       </div>
