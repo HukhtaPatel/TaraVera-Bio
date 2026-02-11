@@ -29,13 +29,27 @@ const AboutUs = () => {
     }
   ];
 
-  const teamPlaceholders = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 }
+  const teamMembers = [
+    {
+      name: 'Radha Desai, PhD',
+      title: 'Co-Founder and CEO/CSO',
+      bio: 'Radha is a biotech entrepreneur and experienced drug discovery leader with over 20 years of academic and industry experience in neurodegeneration and mitochondrial biology. She has led multidisciplinary research programmes, translating complex biological insights into viable therapeutic candidates. Her scientific work has been published in leading journals including Science Advances and Brain.',
+      highlights: 'Radha brings a distinctive ability to bridge bold scientific innovation with disciplined execution, building capital-efficient programmes with a clear focus on patient impact.',
+      background: 'PhD in Neuroscience from UCL, postdoctoral training from NIMR (Mill Hill) and Royal Veterinary College. Started her Pharma career at Pfizer, most recently as drug hunter at MSD UK.',
+      personal: 'Passionate about advocating for women in STEM. Outside of work, enjoys experimenting in the kitchen and spending time with her daughter.',
+      email: 'Radha@TaraVera.bio',
+      color: 'blue'
+    },
+    {
+      name: 'Sian Lewis',
+      title: 'Co-Founder and Head of Drug Discovery',
+      bio: 'Sian is a seasoned pharmacologist with over 25 years of experience leading early-stage drug discovery teams across major Pharma and biotech organisations. She is recognised for building inclusive, high-performing teams and for guiding complex programmes through clear scientific governance and milestone-driven decision making.',
+      highlights: 'Sian brings deep expertise in pharmacology, screening strategy, and external collaboration, with a leadership style grounded in mentorship, clarity, and delivery.',
+      background: 'Built her experience in drug discovery at GSK, Eisai, Millennium and most recently as head of cellular pharmacology at MSD UK.',
+      personal: 'At TaraVera Bio, Sian leads drug discovery, creating a collaborative culture that translates strong biology into high-quality drug candidates.',
+      email: 'Sian@TaraVera.bio',
+      color: 'purple'
+    }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -158,7 +172,7 @@ const AboutUs = () => {
 
         {/* Management Team Section */}
         <div id="management-team" className="scroll-mt-28">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-lg flex items-center justify-center">
               <Users className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             </div>
@@ -167,48 +181,82 @@ const AboutUs = () => {
             </h2>
           </div>
 
-          <p className="text-gray-600 dark:text-gray-400 mb-8 italic">
-            Management team details will be added here.
-          </p>
+          {/* Team Member Cards */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {teamMembers.map((member, index) => {
+              const gradientClasses = {
+                blue: 'from-blue-600 to-purple-600',
+                purple: 'from-purple-600 to-pink-600'
+              };
+              const borderClasses = {
+                blue: 'hover:border-blue-400 dark:hover:border-blue-500',
+                purple: 'hover:border-purple-400 dark:hover:border-purple-500'
+              };
+              const accentClasses = {
+                blue: 'text-blue-600 dark:text-blue-400',
+                purple: 'text-purple-600 dark:text-purple-400'
+              };
 
-          {/* Placeholder Profile Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamPlaceholders.map((member) => (
-              <div 
-                key={member.id} 
-                className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300"
-              >
-                {/* Avatar Placeholder */}
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 rounded-full mx-auto mb-4"></div>
-                
-                {/* Name Placeholder */}
-                <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mx-auto mb-2"></div>
-                
-                {/* Title Placeholder */}
-                <div className="h-4 bg-gray-100 dark:bg-gray-700/50 rounded w-1/2 mx-auto mb-4"></div>
-                
-                {/* Biography Placeholder */}
-                <div className="space-y-2 mb-4">
-                  <div className="h-3 bg-gray-100 dark:bg-gray-700/30 rounded w-full"></div>
-                  <div className="h-3 bg-gray-100 dark:bg-gray-700/30 rounded w-5/6"></div>
-                  <div className="h-3 bg-gray-100 dark:bg-gray-700/30 rounded w-4/6"></div>
-                </div>
-                
-                {/* Previous Roles Label */}
-                <div className="text-xs text-gray-500 dark:text-gray-500 mb-2">Previous roles</div>
-                <div className="h-3 bg-gray-100 dark:bg-gray-700/30 rounded w-2/3 mb-4"></div>
-                
-                {/* Contact Link Placeholder */}
-                <div className="flex justify-center gap-2">
-                  <div className="w-8 h-8 bg-gray-100 dark:bg-gray-700/30 rounded-lg flex items-center justify-center">
-                    <Mail className="w-4 h-4 text-gray-400 dark:text-gray-600" />
+              return (
+                <div 
+                  key={index}
+                  className={`bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 ${borderClasses[member.color]} transition-all duration-300 hover:shadow-xl`}
+                  data-testid={`team-member-${index}`}
+                >
+                  {/* Header with gradient */}
+                  <div className={`bg-gradient-to-r ${gradientClasses[member.color]} p-6 text-white`}>
+                    <div className="flex items-center gap-4">
+                      {/* Avatar placeholder */}
+                      <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-2xl font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold mb-1">
+                          {member.name}
+                        </h3>
+                        <p className="text-white/90 font-medium">
+                          {member.title}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="w-8 h-8 bg-gray-100 dark:bg-gray-700/30 rounded-lg flex items-center justify-center">
-                    <Linkedin className="w-4 h-4 text-gray-400 dark:text-gray-600" />
+
+                  {/* Content */}
+                  <div className="p-6 space-y-4">
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                      {member.bio}
+                    </p>
+                    
+                    <p className={`${accentClasses[member.color]} font-medium leading-relaxed`}>
+                      {member.highlights}
+                    </p>
+
+                    <div className="pt-2">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <span className="font-semibold">Background:</span> {member.background}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                      <p className="text-sm text-gray-500 dark:text-gray-500 italic leading-relaxed">
+                        {member.personal}
+                      </p>
+                    </div>
+
+                    {/* Contact */}
+                    <div className="pt-4 flex items-center gap-4">
+                      <a 
+                        href={`mailto:${member.email}`}
+                        className={`inline-flex items-center gap-2 ${accentClasses[member.color]} hover:underline font-medium text-sm`}
+                      >
+                        <Mail className="w-4 h-4" />
+                        {member.email}
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
