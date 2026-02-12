@@ -60,6 +60,15 @@ const Header = () => {
     return activeSection === sectionId;
   };
 
+  // Logo URLs
+  const lightModeLogo = "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/81x7ccsj_taravera-logo-cropped-light-charcoal.png";
+  const darkModeLogo = "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/98l1vywk_taravera-logo-cropped.png";
+
+  // Determine which logo to show based on theme and scroll state
+  // Light mode (scrolled): show charcoal/dark text logo
+  // Dark mode OR not scrolled (dark hero): show white text logo
+  const currentLogo = (isScrolled && !isDarkMode) ? lightModeLogo : darkModeLogo;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4" data-testid="header">
       {/* Desktop Pill Navigation */}
@@ -69,7 +78,7 @@ const Header = () => {
             ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-lg shadow-black/5 border border-gray-200/50 dark:border-gray-700/50' 
             : 'bg-white/10 backdrop-blur-md border border-white/20'
         }`}>
-          {/* Logo */}
+          {/* Logo - Top Left */}
           <a 
             href="#home" 
             onClick={(e) => scrollToSection(e, '#home')}
@@ -77,12 +86,10 @@ const Header = () => {
             data-testid="logo-link"
           >
             <img 
-              src={isScrolled && !isDarkMode 
-                ? "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/g11plfz5_High%20Resolution%20Logo.png"
-                : "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/hv1hxcic_taravera-logo-cropped.png"
-              }
-              alt="TaraVera Bio Logo" 
-              className="h-8 w-auto transition-all duration-300"
+              src={currentLogo}
+              alt="TaraVera Bio" 
+              className="h-[44px] w-auto object-contain transition-all duration-300"
+              style={{ height: '44px' }}
             />
           </a>
 
@@ -134,19 +141,17 @@ const Header = () => {
             ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-lg border border-gray-200/50 dark:border-gray-700/50' 
             : 'bg-white/10 backdrop-blur-md border border-white/20'
         }`}>
-          {/* Logo */}
+        {/* Logo - Top Left */}
           <a 
             href="#home" 
             onClick={(e) => scrollToSection(e, '#home')}
             className="flex items-center" 
           >
             <img 
-              src={isScrolled && !isDarkMode 
-                ? "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/g11plfz5_High%20Resolution%20Logo.png"
-                : "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/hv1hxcic_taravera-logo-cropped.png"
-              }
-              alt="TaraVera Bio Logo" 
-              className="h-7 w-auto transition-all duration-300"
+              src={currentLogo}
+              alt="TaraVera Bio" 
+              className="h-[36px] w-auto object-contain transition-all duration-300"
+              style={{ height: '36px' }}
             />
           </a>
 
