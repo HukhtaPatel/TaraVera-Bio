@@ -78,8 +78,8 @@ const Header = () => {
           >
             <img 
               src={isDarkMode || !isScrolled
-                ? "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
-                : "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png"
+                ? "https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/4bj4pg4e_image.png"
+                : "https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/4bj4pg4e_image.png"
               }
               alt="TaraVera Bio Logo" 
               className="h-8 w-auto transition-opacity duration-300"
