@@ -106,11 +106,11 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="space-y-8 text-center">
             <p className="font-body text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-normal">
-              TaraVera Bio is building first-in-class therapeutics that target disease-modifying pathways in neurodegeneration.
+              By intervening earlier and more precisely in the biology that drives disease, we aim to change the trajectory of brain disorders — from inevitable to hopeful.
             </p>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto"></div>
             <p className="font-body text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-              We focus on compelling human biology and translate it into safe, differentiated small-molecule medicines, guided by robust scientific data and a clear line of sight to the clinic.
+              Guided by robust scientific data and a clear line of sight to the clinic.
             </p>
           </div>
         </div>
