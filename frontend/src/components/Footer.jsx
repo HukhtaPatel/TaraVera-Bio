@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Linkedin } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
 
 const Footer = () => {
   return (
