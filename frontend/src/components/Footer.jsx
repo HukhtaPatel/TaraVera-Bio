@@ -1,8 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Mail, Linkedin } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToSection = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-16" data-testid="footer">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -40,24 +55,40 @@ const Footer = () => {
             <h4 className="font-display text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="font-body space-y-3">
               <li>
-                <Link to="/" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200">
+                <a 
+                  href="#home" 
+                  onClick={(e) => scrollToSection(e, '#home')}
+                  className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/science" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200">
+                <a 
+                  href="#science" 
+                  onClick={(e) => scrollToSection(e, '#science')}
+                  className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
                   Science
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200">
+                <a 
+                  href="#about" 
+                  onClick={(e) => scrollToSection(e, '#about')}
+                  className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
                   About Us
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/news" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200">
+                <a 
+                  href="#news" 
+                  onClick={(e) => scrollToSection(e, '#news')}
+                  className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
                   News
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -67,14 +98,31 @@ const Footer = () => {
             <h4 className="font-display text-lg font-semibold mb-4">About Us</h4>
             <ul className="font-body space-y-3 text-gray-400 dark:text-gray-500">
               <li>
-                <Link to="/about#vision-and-values" className="hover:text-white transition-colors duration-200">
+                <a 
+                  href="#vision" 
+                  onClick={(e) => scrollToSection(e, '#vision')}
+                  className="hover:text-white transition-colors duration-200 cursor-pointer"
+                >
                   Vision and Values
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/about#management-team" className="hover:text-white transition-colors duration-200">
+                <a 
+                  href="#team" 
+                  onClick={(e) => scrollToSection(e, '#team')}
+                  className="hover:text-white transition-colors duration-200 cursor-pointer"
+                >
                   Management Team
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#contact" 
+                  onClick={(e) => scrollToSection(e, '#contact')}
+                  className="hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>
