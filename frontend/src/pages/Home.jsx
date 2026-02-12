@@ -277,7 +277,7 @@ const Home = () => {
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center">
-                <Activity className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                <Microscope className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
               <h3 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
                 Biomarker — Improved measures of Tau
