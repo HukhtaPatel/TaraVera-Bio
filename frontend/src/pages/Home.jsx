@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Brain, Microscope, FlaskConical, Users } from 'lucide-react';
+import { ArrowRight, Brain, Microscope, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -17,13 +17,6 @@ const Home = () => {
       description: 'Leveraging advances in tau detection for clear translation to the clinic.',
       link: '/science',
       color: 'purple'
-    },
-    {
-      icon: FlaskConical,
-      title: 'Programme',
-      description: 'First-in-class enzymatic inhibition to re-establish healthy tau homeostasis.',
-      link: '/programme',
-      color: 'teal'
     },
     {
       icon: Users,
@@ -46,12 +39,6 @@ const Home = () => {
       icon: 'text-purple-600 dark:text-purple-400',
       hover: 'hover:border-purple-500/50 dark:hover:border-purple-400/50',
       glow: 'group-hover:shadow-purple-500/20'
-    },
-    teal: {
-      bg: 'bg-teal-500/10 dark:bg-teal-500/20',
-      icon: 'text-teal-600 dark:text-teal-400',
-      hover: 'hover:border-teal-500/50 dark:hover:border-teal-400/50',
-      glow: 'group-hover:shadow-teal-500/20'
     },
     orange: {
       bg: 'bg-orange-500/10 dark:bg-orange-500/20',
