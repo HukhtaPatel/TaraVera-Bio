@@ -25,9 +25,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <img 
-              src="https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/g11plfz5_High%20Resolution%20Logo.png"
+              src="https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/hv1hxcic_taravera-logo-cropped.png"
               alt="TaraVera Bio Logo" 
-              className="h-14 w-auto mb-4 brightness-0 invert"
+              className="h-14 w-auto mb-4"
             />
             <p className="font-body text-gray-400 dark:text-gray-500 leading-relaxed mb-6">
               Precision where biology diverges. Developing small-molecule medicines for neurodegeneration with a clear line of sight to the clinic.
