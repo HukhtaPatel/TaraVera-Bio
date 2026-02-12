@@ -183,10 +183,10 @@ const Home = () => {
               </h2>
               <div className="space-y-6">
                 <p className="font-body text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Our team brings deep pharmaceutical experience across discovery, development, and partnering, combining the rigour of big pharma with the agility of a precision biotech.
+                  Our team brings deep pharmaceutical experience across discovery, development, and partnering — combining the rigour of big pharma with the agility of a precision biotech.
                 </p>
                 <p className="font-body text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  By intervening earlier and more precisely in the biology that drives disease, we aim to change the trajectory of brain disorders — <span className="text-gray-900 dark:text-gray-100 font-medium">from inevitable to hopeful.</span>
+                  We believe better outcomes come not from louder promises, but from <span className="text-gray-900 dark:text-gray-100 font-medium">deeper science.</span>
                 </p>
               </div>
               <div className="pt-4">
