@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../contexts/ThemeContext';
@@ -62,21 +61,19 @@ const Header = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
-      }`}
-      data-testid="header"
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4" data-testid="header">
+      {/* Desktop Pill Navigation */}
+      <nav className="hidden md:flex max-w-4xl mx-auto">
+        <div className={`flex items-center justify-between w-full px-2 py-2 rounded-full transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-lg shadow-black/5 border border-gray-200/50 dark:border-gray-700/50' 
+            : 'bg-white/10 backdrop-blur-md border border-white/20'
+        }`}>
           {/* Logo */}
           <a 
             href="#home" 
             onClick={(e) => scrollToSection(e, '#home')}
-            className="flex items-center gap-3" 
+            className="flex items-center pl-3" 
             data-testid="logo-link"
           >
             <img 
@@ -85,77 +82,126 @@ const Header = () => {
                 : "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png"
               }
               alt="TaraVera Bio Logo" 
-              className="h-10 w-auto transition-opacity duration-300"
+              className="h-8 w-auto transition-opacity duration-300"
             />
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8" data-testid="desktop-nav">
+          {/* Navigation Links */}
+          <div className="flex items-center gap-1" data-testid="desktop-nav">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className={`font-body text-sm font-semibold transition-colors duration-200 ${
+                className={`font-body text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 ${
                   isActiveLink(link.href)
-                    ? 'text-blue-400'
+                    ? isScrolled 
+                      ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400'
+                      : 'bg-white/20 text-white'
                     : isScrolled 
-                      ? 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                      : 'text-white/90 hover:text-white'
+                      ? 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
                 data-testid={`nav-${link.name.toLowerCase().replace(' ', '-')}`}
               >
                 {link.name}
               </a>
             ))}
-          </nav>
-
-          {/* Theme Toggle */}
-          <div className="hidden md:flex items-center gap-4">
-            <ThemeToggle />
           </div>
 
+          {/* Right Side - Theme Toggle & CTA */}
+          <div className="flex items-center gap-2 pr-1">
+            <ThemeToggle />
+            <a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, '#contact')}
+              className={`font-body text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 ${
+                isScrolled
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg'
+                  : 'bg-white text-gray-900 hover:bg-gray-100'
+              }`}
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <div className={`flex items-center justify-between px-4 py-3 rounded-full transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-lg border border-gray-200/50 dark:border-gray-700/50' 
+            : 'bg-white/10 backdrop-blur-md border border-white/20'
+        }`}>
+          {/* Logo */}
+          <a 
+            href="#home" 
+            onClick={(e) => scrollToSection(e, '#home')}
+            className="flex items-center" 
+          >
+            <img 
+              src={isDarkMode || !isScrolled
+                ? "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
+                : "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png"
+              }
+              alt="TaraVera Bio Logo" 
+              className="h-7 w-auto"
+            />
+          </a>
+
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <ThemeToggle />
             <button
-              className="p-2"
+              className={`p-2 rounded-full transition-colors ${
+                isScrolled 
+                  ? 'hover:bg-gray-100 dark:hover:bg-gray-800' 
+                  : 'hover:bg-white/10'
+              }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="mobile-menu-btn"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
-                <X className={`h-6 w-6 ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`} />
+                <X className={`h-5 w-5 ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`} />
               ) : (
-                <Menu className={`h-6 w-6 ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`} />
+                <Menu className={`h-5 w-5 ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`} />
               )}
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-lg" data-testid="mobile-menu">
-          <div className="px-6 py-4 space-y-3">
-            {navLinks.map((link) => (
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="mt-2 mx-2 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl rounded-2xl shadow-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden" data-testid="mobile-menu">
+            <div className="p-4 space-y-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  className={`font-body block px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
+                    isActiveLink(link.href)
+                      ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                  data-testid={`mobile-nav-${link.name.toLowerCase().replace(' ', '-')}`}
+                >
+                  {link.name}
+                </a>
+              ))}
               <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className={`font-body block py-2 text-sm font-semibold transition-colors duration-200 ${
-                  isActiveLink(link.href)
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                }`}
-                data-testid={`mobile-nav-${link.name.toLowerCase().replace(' ', '-')}`}
+                href="#contact"
+                onClick={(e) => scrollToSection(e, '#contact')}
+                className="font-body block px-4 py-3 mt-2 text-sm font-semibold text-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white"
               >
-                {link.name}
+                Contact Us
               </a>
-            ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 };
