@@ -324,7 +324,7 @@ const Home = () => {
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-lg flex items-center justify-center">
-                <Beaker className="w-6 h-6 text-teal-600 dark:text-teal-400" />
+                <FlaskConical className="w-6 h-6 text-teal-600 dark:text-teal-400" />
               </div>
               <h3 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
                 Lead Programme
