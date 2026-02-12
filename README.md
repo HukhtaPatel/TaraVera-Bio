@@ -2,17 +2,14 @@
 
 A modern, minimalist biotech company website built with React and Tailwind CSS. TaraVera Bio is focused on building first-in-class therapeutics that target disease-modifying pathways in neurodegeneration.
 
-![TaraVera Bio](https://customer-assets.emergentagent.com/job_brain-restore/artifacts/jjnhb7md_image.png)
-
 ## 🧬 About
 
-TaraVera Bio is a precision biotech company developing small-molecule medicines for neurodegeneration. This website serves as the company's digital presence, showcasing their science, programme, team, and news.
+TaraVera Bio is a precision biotech company developing small-molecule medicines for neurodegeneration. This website serves as the company's digital presence, showcasing their science, team, and news.
 
 ## 🛠️ Tech Stack
 
 ### Frontend
 - **React 18** - UI library
-- **React Router v6** - Client-side routing
 - **Tailwind CSS** - Utility-first CSS framework
 - **Shadcn/UI** - Component library
 - **Lucide React** - Icon library
@@ -37,6 +34,10 @@ TaraVera Bio is a precision biotech company developing small-molecule medicines 
 │
 ├── frontend/
 │   ├── public/
+│   │   ├── assets/            # Logo and image assets
+│   │   ├── videos/            # Video backgrounds
+│   │   │   ├── hero-video.mp4
+│   │   │   └── science-video.mp4
 │   │   └── index.html         # HTML template with font imports
 │   │
 │   ├── src/
@@ -44,20 +45,16 @@ TaraVera Bio is a precision biotech company developing small-molecule medicines 
 │   │   │   ├── ui/            # Shadcn UI components
 │   │   │   ├── BiotechBackground.jsx
 │   │   │   ├── Footer.jsx
-│   │   │   ├── Header.jsx
+│   │   │   ├── Header.jsx     # Floating pill-shaped navigation
 │   │   │   └── ThemeToggle.jsx
 │   │   │
 │   │   ├── contexts/
 │   │   │   └── ThemeContext.jsx  # Dark/Light mode context
 │   │   │
 │   │   ├── pages/
-│   │   │   ├── Home.jsx       # Landing page
-│   │   │   ├── Science.jsx    # Science page
-│   │   │   ├── Programme.jsx  # Programme page
-│   │   │   ├── AboutUs.jsx    # About Us page
-│   │   │   └── News.jsx       # News page
+│   │   │   └── Home.jsx       # Single-page with all sections
 │   │   │
-│   │   ├── App.js             # Main app with routing
+│   │   ├── App.js             # Main app component
 │   │   ├── App.css            # Global animations
 │   │   └── index.css          # Tailwind & typography styles
 │   │
@@ -66,6 +63,35 @@ TaraVera Bio is a precision biotech company developing small-molecule medicines 
 │
 └── README.md                  # This file
 ```
+
+## 🎨 Design Features
+
+### Logo System
+The website uses a dual-logo system for optimal visibility across different backgrounds:
+
+| Context | Logo Version | Description |
+|---------|-------------|-------------|
+| Dark backgrounds (hero, dark mode) | White text logo | Colorful icon + white "TaraVera Bio" text |
+| Light backgrounds (scrolled header) | Black text logo | Colorful icon + black "TaraVera Bio" text |
+| Footer | White text logo | Always on dark background |
+
+**Logo sizing:**
+- Desktop header: `h-8` (32px)
+- Mobile header: `h-7` (28px)
+- Footer: `h-14` (56px)
+
+### Floating Pill Navigation
+- Glassmorphism effect with backdrop blur
+- Semi-transparent background that adapts to scroll position
+- Smooth-scroll navigation to page sections
+- Active section highlighting
+
+### Single-Page Architecture
+All content is consolidated into a single landing page with smooth-scroll navigation:
+- **Home** (`#home`) - Hero section with video background
+- **Science** (`#science`) - Scientific approach and biomarker strategy
+- **About Us** (`#about`) - Vision, values, and management team
+- **News** (`#news`) - Company announcements
 
 ## 🚀 Getting Started
 
@@ -136,42 +162,38 @@ MONGO_URL=mongodb://localhost:27017
 DB_NAME=taravera_bio
 ```
 
-## 📄 Pages Overview
+## 📄 Page Sections
 
-### Home (`/`)
+### Home Section (`#home`)
 - Hero section with video background
 - Mission statement
-- Feature cards (Biology, Biomarkers, Programme, About Us)
-- Philosophy section with team CTA
-- Latest news preview
+- "Explore Our Science" CTA
 
-### Science (`/science`)
-- Video hero section
-- Biology section - Disease progression
-- Biomarker section - Measuring biology
-- Patient Benefit section - Why tau clearance matters
+### Science Section (`#science`)
+- Our Approach - Precision science overview
+- Biology explanation - Understanding neurodegeneration
+- Biomarker Strategy - Fluid biomarker platform
+- Lead Programme - Development pathway diagram
 
-### Programme (`/programme`)
-- Lead Programme overview
-- Outcome callout
-- Development pathway diagram (8 steps)
-- Funding stages (PreSeed → Seed → Series A)
-
-### About Us (`/about`)
-- Company introduction
-- Vision and Values section (anchor: `#vision-and-values`)
-- Management Team section (anchor: `#management-team`)
+### About Us Section (`#about`)
+- Vision and Values
+- Management Team profiles:
   - Radha Desai, PhD - Co-Founder and CEO/CSO
   - Sian Lewis - Co-Founder and Head of Drug Discovery
+- Contact Us CTA
 
-### News (`/news`)
-- Company news and announcements
-- TaraVera Bio formation story (January 2026)
+### News Section (`#news`)
+- Company formation announcement (January 2026)
+- Company vision and mission
 
 ## 🎨 Features
 
 ### Dark Mode
 Toggle between light and dark themes using the sun/moon icon in the header. Theme preference is persisted in localStorage.
+
+The logo automatically switches between:
+- **Light mode (scrolled)**: Black text logo for visibility on white header
+- **Dark mode / Hero section**: White text logo for visibility on dark backgrounds
 
 ### Responsive Design
 Fully responsive across all devices:
@@ -192,22 +214,38 @@ Fully responsive across all devices:
 | Buttons | Manrope | 600 | 14-16px |
 
 ### Video Backgrounds
-- Home page: Abstract neural network animation
-- Science page: Protein/amino acid visualization
+- Home hero: Abstract neural network animation
+- Science section: Protein/amino acid visualization
 
 ## 🔧 Customization
 
-### Adding New Pages
+### Adding New Sections
 
-1. Create a new component in `frontend/src/pages/`
-2. Add the route in `frontend/src/App.js`:
+1. Add section content in `frontend/src/pages/Home.jsx`
+2. Add section `id` attribute for scroll targeting
+3. Add navigation link in `frontend/src/components/Header.jsx`:
    ```jsx
-   import NewPage from './pages/NewPage';
-   
-   // In Routes
-   <Route path="/new-page" element={<NewPage />} />
+   const navLinks = [
+     { name: 'Home', href: '#home' },
+     { name: 'Science', href: '#science' },
+     { name: 'About Us', href: '#about' },
+     { name: 'News', href: '#news' },
+     { name: 'New Section', href: '#new-section' }, // Add new link
+   ];
    ```
-3. Add navigation link in `frontend/src/components/Header.jsx`
+
+### Updating Logos
+
+Logo URLs are defined in:
+- `frontend/src/components/Header.jsx` - Header logos (light and dark versions)
+- `frontend/src/components/Footer.jsx` - Footer logo
+
+To update logos:
+1. Upload new logo images
+2. Update the `src` URLs in the respective components
+3. The system uses two logo versions:
+   - Light mode logo (black text): For light backgrounds
+   - Dark mode logo (white text): For dark backgrounds
 
 ### Modifying Theme Colors
 
@@ -248,19 +286,17 @@ yarn test
 
 Currently, all content is hardcoded in the React components. To update content:
 
-1. **Home page content**: Edit `frontend/src/pages/Home.jsx`
-2. **Science content**: Edit `frontend/src/pages/Science.jsx`
-3. **Programme content**: Edit `frontend/src/pages/Programme.jsx`
-4. **Team profiles**: Edit `frontend/src/pages/AboutUs.jsx`
-5. **News articles**: Edit `frontend/src/pages/News.jsx`
+1. **All page sections**: Edit `frontend/src/pages/Home.jsx`
+2. **Navigation**: Edit `frontend/src/components/Header.jsx`
+3. **Footer content**: Edit `frontend/src/components/Footer.jsx`
 
 ## 🔮 Future Enhancements
 
 - [ ] Backend API for dynamic content management
 - [ ] Contact form with email integration
 - [ ] CMS integration for content updates
-- [ ] Blog/News pagination
-- [ ] Search functionality
+- [ ] Scroll-triggered animations
+- [ ] Interactive development pathway graphic
 - [ ] Analytics integration
 
 ## 📄 License
@@ -274,8 +310,8 @@ Proprietary - TaraVera Bio © 2026
 
 ## 📧 Contact
 
-- Email: info@taraverabio.com
-- Website: [TaraVera Bio](https://taraverabio.com)
+- Email: info@taravera.bio
+- Website: [TaraVera Bio](https://taravera.bio)
 
 ---
 
