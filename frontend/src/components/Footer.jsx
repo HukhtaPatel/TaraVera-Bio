@@ -25,7 +25,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <img 
-              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
+              src="https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/4bj4pg4e_image.png"
               alt="TaraVera Bio Logo" 
               className="h-10 w-auto mb-4"
             />
