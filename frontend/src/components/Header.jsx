@@ -82,7 +82,7 @@ const Header = () => {
                 : "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/hv1hxcic_taravera-logo-cropped.png"
               }
               alt="TaraVera Bio Logo" 
-              className="h-12 w-auto transition-all duration-300"
+              className="h-8 w-auto transition-all duration-300"
             />
           </a>
 
@@ -146,7 +146,7 @@ const Header = () => {
                 : "https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/hv1hxcic_taravera-logo-cropped.png"
               }
               alt="TaraVera Bio Logo" 
-              className="h-10 w-auto transition-all duration-300"
+              className="h-7 w-auto transition-all duration-300"
             />
           </a>
 
