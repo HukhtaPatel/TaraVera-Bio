@@ -80,7 +80,7 @@ const Header = () => {
               src="https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/g11plfz5_High%20Resolution%20Logo.png"
               alt="TaraVera Bio Logo" 
               className={`h-12 w-auto transition-all duration-300 ${
-                isDarkMode || !isScrolled ? 'brightness-0 invert' : ''
+                !isScrolled || isDarkMode ? 'brightness-0 invert' : ''
               }`}
             />
           </a>
@@ -143,7 +143,7 @@ const Header = () => {
               src="https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/g11plfz5_High%20Resolution%20Logo.png"
               alt="TaraVera Bio Logo" 
               className={`h-10 w-auto transition-all duration-300 ${
-                isDarkMode || !isScrolled ? 'brightness-0 invert' : ''
+                !isScrolled || isDarkMode ? 'brightness-0 invert' : ''
               }`}
             />
           </a>
