@@ -4,8 +4,6 @@ import { Mail, Linkedin } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Footer = () => {
-  const { isDarkMode } = useTheme();
-  
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-16" data-testid="footer">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -13,15 +11,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <img 
-              src={isDarkMode 
-                ? "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
-                : "https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
-              }
+              src="https://customer-assets.emergentagent.com/job_brain-restore/artifacts/zd5gepdr_image.png"
               alt="TaraVera Bio Logo" 
-              className="h-10 w-auto mb-4 transition-opacity duration-300"
+              className="h-10 w-auto mb-4"
             />
             <p className="font-body text-gray-400 dark:text-gray-500 leading-relaxed mb-6">
-              TaraVera Bio is building first-in-class therapeutics that target disease-modifying pathways in neurodegeneration. We focus on compelling human biology and translate it into safe, differentiated small-molecule medicines.
+              Precision where biology diverges. Developing small-molecule medicines for neurodegeneration with a clear line of sight to the clinic.
             </p>
             <div className="flex items-center gap-4">
               <a 
@@ -32,7 +27,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="mailto:info@taraverabio.com" 
+                href="mailto:info@taravera.bio" 
                 className="w-10 h-10 bg-gray-800 dark:bg-gray-900 hover:bg-blue-600 dark:hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors duration-300"
                 aria-label="Email"
               >
