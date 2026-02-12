@@ -359,18 +359,19 @@ const Home = () => {
             </h3>
             
             {/* Desktop: Horizontal */}
-            <div className="hidden md:block">
-              <div className="flex items-stretch justify-center gap-2 lg:gap-3 mb-8">
+            <div className="hidden md:block max-w-[1100px] mx-auto">
+              {/* Steps Row */}
+              <div className="flex items-stretch justify-between mb-8">
                 {developmentSteps.map((step, index) => (
                   <React.Fragment key={index}>
-                    <div className="flex-shrink-0 w-[90px] lg:w-[110px] xl:w-[130px] min-h-[160px] bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div className="flex-1 min-h-[160px] bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                       <span className="font-body text-white text-[11px] lg:text-xs xl:text-sm font-medium text-center leading-tight whitespace-pre-line">
                         {step}
                       </span>
                     </div>
                     {index < developmentSteps.length - 1 && (
-                      <div className="flex-shrink-0 w-4 lg:w-5 flex items-center">
-                        <svg viewBox="0 0 24 24" fill="none" className="w-full h-5 text-blue-300">
+                      <div className="flex-shrink-0 w-4 lg:w-5 flex items-center justify-center">
+                        <svg viewBox="0 0 24 24" fill="none" className="w-4 h-5 text-blue-300">
                           <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </div>
@@ -379,15 +380,18 @@ const Home = () => {
                 ))}
               </div>
 
-              {/* Funding Stages */}
-              <div className="flex justify-center gap-4 lg:gap-6">
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 border border-blue-200 dark:border-blue-700 rounded-2xl py-6 w-[230px] text-center shadow-md">
+              {/* Funding Stages Row - Same width as steps */}
+              <div className="flex gap-4">
+                {/* PreSeed - 2/8 = 25% */}
+                <div className="flex-[2] bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 border border-blue-200 dark:border-blue-700 rounded-2xl py-6 text-center shadow-md">
                   <span className="font-display text-gray-800 dark:text-gray-200 text-lg font-semibold">PreSeed</span>
                 </div>
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border border-purple-200 dark:border-purple-700 rounded-2xl py-6 w-[460px] text-center shadow-md">
+                {/* Seed - 4/8 = 50% */}
+                <div className="flex-[4] bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border border-purple-200 dark:border-purple-700 rounded-2xl py-6 text-center shadow-md">
                   <span className="font-display text-gray-800 dark:text-gray-200 text-lg font-semibold">Seed</span>
                 </div>
-                <div className="bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 border border-pink-200 dark:border-pink-700 rounded-2xl py-6 w-[230px] text-center shadow-md">
+                {/* Series A - 2/8 = 25% */}
+                <div className="flex-[2] bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 border border-pink-200 dark:border-pink-700 rounded-2xl py-6 text-center shadow-md">
                   <span className="font-display text-gray-800 dark:text-gray-200 text-lg font-semibold">Series A</span>
                 </div>
               </div>
