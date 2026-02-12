@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Heart, Shield, Handshake, Globe, Mail, Linkedin } from 'lucide-react';
+import { Users, Heart, Shield, Handshake, Globe, Mail, ArrowRight } from 'lucide-react';
 
 const AboutUs = () => {
   const values = [
@@ -38,7 +38,6 @@ const AboutUs = () => {
       highlights: 'Radha brings a distinctive ability to bridge bold scientific innovation with disciplined execution, building capital-efficient programmes with a clear focus on patient impact.',
       background: 'PhD in Neuroscience from UCL, postdoctoral training from NIMR (Mill Hill) and Royal Veterinary College. Started her Pharma career at Pfizer, most recently as drug hunter at MSD UK.',
       personal: 'Passionate about advocating for women in STEM. Outside of work, enjoys experimenting in the kitchen and spending time with her daughter.',
-      email: 'Radha@TaraVera.bio',
       color: 'blue'
     },
     {
@@ -49,7 +48,6 @@ const AboutUs = () => {
       highlights: 'Sian brings deep expertise in pharmacology, screening strategy, and external collaboration, with a leadership style grounded in mentorship, clarity, and delivery.',
       background: 'Built her experience in drug discovery at GSK, Eisai, Millennium and most recently as head of cellular pharmacology at MSD UK.',
       personal: 'At TaraVera Bio, Sian leads drug discovery, creating a collaborative culture that translates strong biology into high-quality drug candidates.',
-      email: 'Sian@TaraVera.bio',
       color: 'purple'
     }
   ];
@@ -72,7 +70,7 @@ const AboutUs = () => {
         </div>
 
         {/* Sub-navigation */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={() => scrollToSection('vision-and-values')}
             className="font-body px-6 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium"
@@ -87,12 +85,19 @@ const AboutUs = () => {
           >
             Management Team
           </button>
+          <button
+            onClick={() => scrollToSection('contact-us')}
+            className="font-body px-6 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium"
+            data-testid="nav-contact-us"
+          >
+            Contact Us
+          </button>
         </div>
 
         {/* Intro Copy */}
         <div className="max-w-4xl mx-auto mb-20">
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl p-8 md:p-10 border border-blue-200 dark:border-blue-800">
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="font-body space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 TaraVera Bio is building first-in-class therapeutics that target disease-modifying pathways in neurodegeneration.
               </p>
@@ -173,7 +178,7 @@ const AboutUs = () => {
         </div>
 
         {/* Management Team Section */}
-        <div id="management-team" className="scroll-mt-28">
+        <div id="management-team" className="mb-24 scroll-mt-28">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-lg flex items-center justify-center">
               <Users className="w-6 h-6 text-orange-600 dark:text-orange-400" />
@@ -217,14 +222,14 @@ const AboutUs = () => {
                         />
                       ) : (
                         <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-2xl font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
+                          <span className="font-display text-2xl font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
                         </div>
                       )}
                       <div>
                         <h3 className="font-display text-xl md:text-2xl font-bold mb-1">
                           {member.name}
                         </h3>
-                        <p className="text-white/90 font-medium">
+                        <p className="font-body text-white/90 font-medium">
                           {member.title}
                         </p>
                       </div>
@@ -233,40 +238,57 @@ const AboutUs = () => {
 
                   {/* Content */}
                   <div className="p-6 space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <p className="font-body text-gray-700 dark:text-gray-300 leading-relaxed">
                       {member.bio}
                     </p>
                     
-                    <p className={`${accentClasses[member.color]} font-medium leading-relaxed`}>
+                    <p className={`font-body ${accentClasses[member.color]} font-medium leading-relaxed`}>
                       {member.highlights}
                     </p>
 
                     <div className="pt-2">
-                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                      <p className="font-body text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                         <span className="font-semibold">Background:</span> {member.background}
                       </p>
                     </div>
 
                     <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
-                      <p className="text-sm text-gray-500 dark:text-gray-500 italic leading-relaxed">
+                      <p className="font-body text-sm text-gray-500 dark:text-gray-500 italic leading-relaxed">
                         {member.personal}
                       </p>
-                    </div>
-
-                    {/* Contact */}
-                    <div className="pt-4 flex items-center gap-4">
-                      <a 
-                        href={`mailto:${member.email}`}
-                        className={`inline-flex items-center gap-2 ${accentClasses[member.color]} hover:underline font-medium text-sm`}
-                      >
-                        <Mail className="w-4 h-4" />
-                        {member.email}
-                      </a>
                     </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Contact Us Section */}
+        <div id="contact-us" className="scroll-mt-28">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-2xl flex items-center justify-center">
+                <Mail className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              </div>
+            </div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Contact Us
+            </h2>
+            <p className="font-body text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+              Interested in learning more about TaraVera Bio or exploring partnership opportunities? We'd love to hear from you.
+            </p>
+            <a 
+              href="mailto:info@taravera.bio"
+              className="font-body inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
+              data-testid="contact-us-cta"
+            >
+              Get in Touch
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <p className="font-body mt-4 text-gray-500 dark:text-gray-500 text-sm">
+              info@taravera.bio
+            </p>
           </div>
         </div>
       </div>
