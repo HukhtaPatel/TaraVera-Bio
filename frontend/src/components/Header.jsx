@@ -77,12 +77,11 @@ const Header = () => {
             data-testid="logo-link"
           >
             <img 
-              src={isDarkMode || !isScrolled
-                ? "https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/4bj4pg4e_image.png"
-                : "https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/4bj4pg4e_image.png"
-              }
+              src="https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/g11plfz5_High%20Resolution%20Logo.png"
               alt="TaraVera Bio Logo" 
-              className="h-8 w-auto transition-opacity duration-300"
+              className={`h-12 w-auto transition-all duration-300 ${
+                isDarkMode || !isScrolled ? 'brightness-0 invert' : ''
+              }`}
             />
           </a>
 
@@ -141,12 +140,11 @@ const Header = () => {
             className="flex items-center" 
           >
             <img 
-              src={isDarkMode || !isScrolled
-                ? "https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/4bj4pg4e_image.png"
-                : "https://customer-assets.emergentagent.com/job_taravera-landing/artifacts/4bj4pg4e_image.png"
-              }
+              src="https://customer-assets.emergentagent.com/job_taravera-bio/artifacts/g11plfz5_High%20Resolution%20Logo.png"
               alt="TaraVera Bio Logo" 
-              className="h-7 w-auto"
+              className={`h-10 w-auto transition-all duration-300 ${
+                isDarkMode || !isScrolled ? 'brightness-0 invert' : ''
+              }`}
             />
           </a>
 
