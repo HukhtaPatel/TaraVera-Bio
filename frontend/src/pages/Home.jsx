@@ -125,7 +125,7 @@ const Home = () => {
               Our Approach
             </h2>
             <p className="font-body text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Combining the rigour of big pharma with the agility of a precision biotech.
+              Precision science meets disciplined execution.
             </p>
           </div>
 
